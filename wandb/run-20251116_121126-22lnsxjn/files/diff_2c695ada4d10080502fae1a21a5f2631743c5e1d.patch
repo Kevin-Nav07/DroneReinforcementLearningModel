@@ -1,0 +1,1449 @@
+diff --git a/models/CF_THRUST/ppo_thrust.zip b/models/CF_THRUST/ppo_thrust.zip
+deleted file mode 100644
+index 38b90df..0000000
+Binary files a/models/CF_THRUST/ppo_thrust.zip and /dev/null differ
+diff --git a/models/CF_THRUST/vecnormalize.pkl b/models/CF_THRUST/vecnormalize.pkl
+deleted file mode 100644
+index 17ce904..0000000
+Binary files a/models/CF_THRUST/vecnormalize.pkl and /dev/null differ
+diff --git a/models/PPO/1000.zip b/models/PPO/1000.zip
+deleted file mode 100644
+index 545aa17..0000000
+Binary files a/models/PPO/1000.zip and /dev/null differ
+diff --git a/models/PPO/10000.zip b/models/PPO/10000.zip
+deleted file mode 100644
+index d417bb8..0000000
+Binary files a/models/PPO/10000.zip and /dev/null differ
+diff --git a/models/PPO/2000.zip b/models/PPO/2000.zip
+deleted file mode 100644
+index dc884a8..0000000
+Binary files a/models/PPO/2000.zip and /dev/null differ
+diff --git a/models/PPO/3000.zip b/models/PPO/3000.zip
+deleted file mode 100644
+index 4df533b..0000000
+Binary files a/models/PPO/3000.zip and /dev/null differ
+diff --git a/models/PPO/4000.zip b/models/PPO/4000.zip
+deleted file mode 100644
+index 22d0ef3..0000000
+Binary files a/models/PPO/4000.zip and /dev/null differ
+diff --git a/models/PPO/5000.zip b/models/PPO/5000.zip
+deleted file mode 100644
+index 677ac84..0000000
+Binary files a/models/PPO/5000.zip and /dev/null differ
+diff --git a/models/PPO/6000.zip b/models/PPO/6000.zip
+deleted file mode 100644
+index d0ea99b..0000000
+Binary files a/models/PPO/6000.zip and /dev/null differ
+diff --git a/models/PPO/7000.zip b/models/PPO/7000.zip
+deleted file mode 100644
+index cddb8dd..0000000
+Binary files a/models/PPO/7000.zip and /dev/null differ
+diff --git a/models/PPO/8000.zip b/models/PPO/8000.zip
+deleted file mode 100644
+index dad6694..0000000
+Binary files a/models/PPO/8000.zip and /dev/null differ
+diff --git a/models/PPO/9000.zip b/models/PPO/9000.zip
+deleted file mode 100644
+index e938575..0000000
+Binary files a/models/PPO/9000.zip and /dev/null differ
+diff --git a/models/PPO/best_model.zip b/models/PPO/best_model.zip
+deleted file mode 100644
+index 7daf87a..0000000
+Binary files a/models/PPO/best_model.zip and /dev/null differ
+diff --git a/models/PPO/checkpoint_10000.zip b/models/PPO/checkpoint_10000.zip
+deleted file mode 100644
+index 03785f4..0000000
+Binary files a/models/PPO/checkpoint_10000.zip and /dev/null differ
+diff --git a/models/PPO/checkpoint_12000.zip b/models/PPO/checkpoint_12000.zip
+deleted file mode 100644
+index 85e0875..0000000
+Binary files a/models/PPO/checkpoint_12000.zip and /dev/null differ
+diff --git a/models/PPO/checkpoint_14000.zip b/models/PPO/checkpoint_14000.zip
+deleted file mode 100644
+index 73e8e75..0000000
+Binary files a/models/PPO/checkpoint_14000.zip and /dev/null differ
+diff --git a/models/PPO/checkpoint_16000.zip b/models/PPO/checkpoint_16000.zip
+deleted file mode 100644
+index ab6ea45..0000000
+Binary files a/models/PPO/checkpoint_16000.zip and /dev/null differ
+diff --git a/models/PPO/checkpoint_18000.zip b/models/PPO/checkpoint_18000.zip
+deleted file mode 100644
+index fc33923..0000000
+Binary files a/models/PPO/checkpoint_18000.zip and /dev/null differ
+diff --git a/models/PPO/checkpoint_2000.zip b/models/PPO/checkpoint_2000.zip
+deleted file mode 100644
+index 44407d4..0000000
+Binary files a/models/PPO/checkpoint_2000.zip and /dev/null differ
+diff --git a/models/PPO/checkpoint_4000.zip b/models/PPO/checkpoint_4000.zip
+deleted file mode 100644
+index 9060eec..0000000
+Binary files a/models/PPO/checkpoint_4000.zip and /dev/null differ
+diff --git a/models/PPO/checkpoint_6000.zip b/models/PPO/checkpoint_6000.zip
+deleted file mode 100644
+index 3a0e4f9..0000000
+Binary files a/models/PPO/checkpoint_6000.zip and /dev/null differ
+diff --git a/models/PPO/checkpoint_8000.zip b/models/PPO/checkpoint_8000.zip
+deleted file mode 100644
+index 54bb851..0000000
+Binary files a/models/PPO/checkpoint_8000.zip and /dev/null differ
+diff --git a/models/SAC/1000.zip b/models/SAC/1000.zip
+deleted file mode 100644
+index 545aa17..0000000
+Binary files a/models/SAC/1000.zip and /dev/null differ
+diff --git a/models/SAC/10000.zip b/models/SAC/10000.zip
+deleted file mode 100644
+index e2a7688..0000000
+Binary files a/models/SAC/10000.zip and /dev/null differ
+diff --git a/models/SAC/2000.zip b/models/SAC/2000.zip
+deleted file mode 100644
+index 6a71151..0000000
+Binary files a/models/SAC/2000.zip and /dev/null differ
+diff --git a/models/SAC/3000.zip b/models/SAC/3000.zip
+deleted file mode 100644
+index 4df533b..0000000
+Binary files a/models/SAC/3000.zip and /dev/null differ
+diff --git a/models/SAC/4000.zip b/models/SAC/4000.zip
+deleted file mode 100644
+index 41fd342..0000000
+Binary files a/models/SAC/4000.zip and /dev/null differ
+diff --git a/models/SAC/5000.zip b/models/SAC/5000.zip
+deleted file mode 100644
+index 677ac84..0000000
+Binary files a/models/SAC/5000.zip and /dev/null differ
+diff --git a/models/SAC/6000.zip b/models/SAC/6000.zip
+deleted file mode 100644
+index 1e5e32e..0000000
+Binary files a/models/SAC/6000.zip and /dev/null differ
+diff --git a/models/SAC/7000.zip b/models/SAC/7000.zip
+deleted file mode 100644
+index cddb8dd..0000000
+Binary files a/models/SAC/7000.zip and /dev/null differ
+diff --git a/models/SAC/8000.zip b/models/SAC/8000.zip
+deleted file mode 100644
+index 8f9b0f2..0000000
+Binary files a/models/SAC/8000.zip and /dev/null differ
+diff --git a/models/SAC/9000.zip b/models/SAC/9000.zip
+deleted file mode 100644
+index e938575..0000000
+Binary files a/models/SAC/9000.zip and /dev/null differ
+diff --git a/models/SAC/best_model.zip b/models/SAC/best_model.zip
+deleted file mode 100644
+index fe53172..0000000
+Binary files a/models/SAC/best_model.zip and /dev/null differ
+diff --git a/models/SAC/checkpoint_10000.zip b/models/SAC/checkpoint_10000.zip
+deleted file mode 100644
+index b088199..0000000
+Binary files a/models/SAC/checkpoint_10000.zip and /dev/null differ
+diff --git a/models/SAC/checkpoint_12000.zip b/models/SAC/checkpoint_12000.zip
+deleted file mode 100644
+index a95e535..0000000
+Binary files a/models/SAC/checkpoint_12000.zip and /dev/null differ
+diff --git a/models/SAC/checkpoint_14000.zip b/models/SAC/checkpoint_14000.zip
+deleted file mode 100644
+index 6bc45d3..0000000
+Binary files a/models/SAC/checkpoint_14000.zip and /dev/null differ
+diff --git a/models/SAC/checkpoint_16000.zip b/models/SAC/checkpoint_16000.zip
+deleted file mode 100644
+index 70fb01c..0000000
+Binary files a/models/SAC/checkpoint_16000.zip and /dev/null differ
+diff --git a/models/SAC/checkpoint_18000.zip b/models/SAC/checkpoint_18000.zip
+deleted file mode 100644
+index 70fcc21..0000000
+Binary files a/models/SAC/checkpoint_18000.zip and /dev/null differ
+diff --git a/models/SAC/checkpoint_2000.zip b/models/SAC/checkpoint_2000.zip
+deleted file mode 100644
+index f96b4ba..0000000
+Binary files a/models/SAC/checkpoint_2000.zip and /dev/null differ
+diff --git a/models/SAC/checkpoint_4000.zip b/models/SAC/checkpoint_4000.zip
+deleted file mode 100644
+index 3b3e37f..0000000
+Binary files a/models/SAC/checkpoint_4000.zip and /dev/null differ
+diff --git a/models/SAC/checkpoint_6000.zip b/models/SAC/checkpoint_6000.zip
+deleted file mode 100644
+index 43f0e87..0000000
+Binary files a/models/SAC/checkpoint_6000.zip and /dev/null differ
+diff --git a/models/SAC/checkpoint_8000.zip b/models/SAC/checkpoint_8000.zip
+deleted file mode 100644
+index 967bd29..0000000
+Binary files a/models/SAC/checkpoint_8000.zip and /dev/null differ
+diff --git a/src/CrazyFlieEnvComplex.py b/src/CrazyFlieEnvComplex.py
+index f0060c0..7013dc8 100644
+--- a/src/CrazyFlieEnvComplex.py
++++ b/src/CrazyFlieEnvComplex.py
+@@ -39,28 +39,24 @@ class CrazyFlieEnv(gym.Env):
+         xml_path: str,
+         target_z: float = 0.5,
+         max_steps: int = 1500,
+-        n_stack: int = 4,
+-        ##render options ofr camera, render mode, as well as width ahd height of camera as well as the name and positions of the camera
+-        ##remove these???
+-        render_mode: Optional[str] = None,
+-        width: int = 640,
+-        height: int = 480,
+-        camera_name: Optional[str] = None,
+-        follow_body: Optional[str] = None,
+-        cam_distance: float = 1.4,
+-        cam_elevation: float = -20.0,
+-        cam_azimuth: float = 110.0,
++        n_stack: int = 4,##frame stack, we create a stack of observations and n_stack is the number of observations in the stack
+         # Smoothing params, alpha and slew, it's how we soften/limit the thrust at each step
+         thrust_lowpass_alpha: float = 0.25,##
+         thrust_slew_per_step: float = 0.02,##max change per step
+         # Hover success parameters
+         hover_band: float = 0.04,             # ±4 cm band
+-        hover_required_steps: int = 300,       # 60 hz so 1 second to fullfill a steady hover(can increase this)
+-        smooth_window: int = 300,
++        hover_required_steps: int = 600,       # 60 hz so 1 second to fullfill a steady hover(can increase this)
++        smooth_window: int = 600,
+         # Anti-overshoot guards defining a soft ceiling for the drone to not go over(small penalty) and a hard ceiling where the episode terminates and big penalty
+         soft_ceiling_margin: float = 0.20,    # start penalizing > target+0.20 m
+         hard_ceiling_margin: float = 0.40,    # terminate if > target+0.40 m
+-        print_actuators: bool = False,##remove?
++        ##these are noise paramters to simulate domain randomization
++        obs_noise_std: float = 0.0,       # per-step Gaussian noise on obs
++        obs_bias_std: float = 0.0,        # per-episode constant bias on obs
++        action_noise_std: float = 0.0,    # Gaussian noise on actions
++        motor_scale_std: float = 0.0,     # per-episode thrust gain error
++        frame_skip: int = 10,             # base frame skip (was 10)
++        frame_skip_jitter: int = 0,       # +/- jitter in frame skip per episode
+     ):
+         
+         """ Initilaization function to first create the CrazyFlyEnv
+@@ -90,35 +86,36 @@ class CrazyFlieEnv(gym.Env):
+         self.max_steps = int(max_steps)
+ 
+         ######Frame Stack#######
+-        self.n_stack = int(n_stack)   #  NEW: how many past frames to stack
+-        self.obs_dim_single = 13 ###new
+-
+-    #     # --- Actuator autodetect ---
+-    #     ##remove maybe?
+-    #     self.nu = int(self.model.nu)##self.model.nu defines the number of actuators
+-    #     if self.nu < 4:
+-    #         raise ValueError("Model must expose ≥ 4 actuators (motors or virtual controls).")
+-    #     self.ctrl_low = self.model.actuator_ctrlrange[:, 0].copy()
+-    #     self.ctrl_high = self.model.actuator_ctrlrange[:, 1].copy()
+-
+-    #     rng4 = np.c_[self.ctrl_low[:4], self.ctrl_high[:4]]
+-    #     per_motor_like = np.allclose(rng4, rng4[0])
+-    #  #----------------------------
++        self.n_stack = int(n_stack)   ## how many past frames to stack, frame stacking is for passing an array of observations
++        self.obs_dim_single = 13 ##defining a single framed observation as 13 dimensions
++        #### Domain randomizations
++        self.obs_noise_std = float(obs_noise_std)
++        self.obs_bias_std = float(obs_bias_std)
++        self.action_noise_std = float(action_noise_std)
++        self.motor_scale_std = float(motor_scale_std)
++
++        self.frame_skip_base = int(frame_skip)
++        self.frame_skip_jitter = int(frame_skip_jitter)
++        self.frame_skip = self.frame_skip_base  # will be randomized in reset()
++
++        # Per-episode random variables (filled in reset)
++        self.obs_bias = np.zeros(self.obs_dim_single, dtype=np.float32)
++        self.motor_scale = 1.0
++
++
++        #remove maybe? 
+         self.mode = "thrust_plus_moments"## in the mode where the control is the thrust + x,y,z moments
++
++
+         tmin, tmax = 0.0, 0.35 ##define thrust minimum and maximum values according to mj model (0,0.35)
+ 
+-        # give headroom but not ballistic
+-        tmax = min(tmax, 0.30)##can potentially remove, this just caps the thrust
+         
+         ##defining the action space as the 4 actuators of the drone thrust, yaw(z-axis rotate in place), pitch(y-axis forward/back), roll(x-axis left/right)
+         ##low and high values taken from the cf2.xml actuator ctrl ranges
+         ##here we specify the action space using spaces.Box to illustrate a continous range with a range of
+         #low values representing each actuator [0,-1,-1,-1] = [thrust,roll,pitch,yaw]
+         ##high values are for each actuator too [0.35,1,1,1] = [thrust,roll,pitch,yaw]
+-        ##we will be limiting aciton space to only thrust so the drone only understands vertical movement, and no rotaitonal tilting, so it'sa  1D array
+-       # Moment limits — keep small so it doesn’t go crazy.
+-        # These are symmetric ±M; you can tune M later.
+-        mmax = 0.02
++        mmax =1
+         mmin = -mmax
+ 
+         # Action: [thrust, mx, my, mz]
+@@ -129,9 +126,10 @@ class CrazyFlieEnv(gym.Env):
+         )
+ 
+         # Observation space, define an array of 13 dimensions representing our observations and have them be infinity since any of the observations don't have a cap
+-
+-        hi = np.inf * np.ones(self.obs_dim_single * self.n_stack, dtype=np.float32)#####New
+-        self.observation_space = spaces.Box(-hi, hi, dtype=np.float32)#New
++        
++        ##create array of infinities that is of dimension (13*frame_stack_size) 
++        hi = np.inf * np.ones(self.obs_dim_single * self.n_stack, dtype=np.float32)
++        self.observation_space = spaces.Box(-hi, hi, dtype=np.float32)
+         # observation: 13D [pos3, quat4, linv3, angv3]
+         # [x,y,z,  qw,qx,qy,qz,  vx,vy,vz,  wx,wy,wz]
+ 
+@@ -149,54 +147,98 @@ class CrazyFlieEnv(gym.Env):
+         self.max_du = float(thrust_slew_per_step)
+         ##u_cmd is our filtered thrust which we will pass into the data control rather than the raw action
+         self.u_cmd = self.HOVER_THRUST
+-        ##last_du is the thrust of the last episode
++        ##last_du is the thrust of the last episode, we use this in the reward funciton to discourage jerky changes
+         
+         self.last_du = 0.0
+-        ##storing the last moment in this
++        ##storing the last moment values(x,y,z) rotations, as array of 3 zeros(0,0,0) since there is no moments yet
+         self.last_moments = np.zeros(3,dtype=np.float32)
+         self.last_dm = 0
+ 
+ 
+-        # tracking for successful hover
++        ## tracking for successful hover
+         self.band = float(hover_band)
+         self.hover_required = int(hover_required_steps)
+         self.hover_count = 0 ##count for hover time
+ 
+         #  track thrust jerk and vertical speed across the smooth_window(60 steps = 1s)to detect smooth hover with a deque datastructure
+-        self.du_hist = deque(maxlen=int(smooth_window))
+-        self.vz_hist = deque(maxlen=int(smooth_window))
+-        self.frame_skip = 10
++        self.du_hist = deque(maxlen=int(smooth_window))##tracking thrust
++        self.vz_hist = deque(maxlen=int(smooth_window))##tracking vertical velocity
++       
+         # Ceiling values
+         self.soft_ceiling = self.target_z + float(soft_ceiling_margin)
+         self.hard_ceiling = self.target_z + float(hard_ceiling_margin)
+ 
+-        # # Rendering --- remove maube?
+-        # self.render_mode = render_mode
+-        # self._width, self._height = int(width), int(height)
+-        # self._camera_name = camera_name
+-        # self._follow_body_name = follow_body
+-        # self._follow_bid = None
+-        # self._cam_distance = float(cam_distance)
+-        # self._cam_elevation = float(cam_elevation)
+-        # self._cam_azimuth = float(cam_azimuth)
+-        # self._renderer: Optional[mj.Renderer] = None
+-        # if self.render_mode == "rgb_array":
+-        #     self._renderer = mj.Renderer(self.model, height=self._height, width=self._width)
+-        # if self._follow_body_name is not None:
+-        #     bid = mj.mj_name2id(self.model, mj.mjtObj.mjOBJ_BODY, self._follow_body_name)
+-        #     if bid < 0:
+-        #         raise ValueError(f"follow_body='{self._follow_body_name}' not found")
+-        #     self._follow_bid = int(bid)
+-        # else:
+-        #     self._follow_bid = 1 if self.model.nbody > 1 else None
++        self.step_idx = 0##step counter until reach max_steps
+ 
+-        self.step_idx = 0
++      
++        # --- Ground-stall detection ---
++        ##ground stall detection is when the drone is at ground level, we use this in reward function to penalize stalling on ground
++        self.ground_z_threshold = 0.10    # 10 cm; this is the threshold to detect ground stalling
++        self.max_ground_steps = 50        # how many steps allowed near ground before we hit it with a penalty
++        self.ground_steps = 0
++        self.prev_dz = 0.0
++
++
++
++    def _apply_obs_noise(self, single: np.ndarray) -> np.ndarray:
++            """
++            Take a clean single-frame observation and add:
++            - per-episode bias (obs_bias)
++            - per-step Gaussian noise
++            """
++            noisy = single.astype(np.float32).copy()
++
++            # Bias (same every step this episode)
++            if self.obs_bias_std > 0.0:
++                noisy += self.obs_bias
++
++            # Per-step Gaussian noise
++            if self.obs_noise_std > 0.0:
++                rng = getattr(self, "np_random", np.random)
++                noisy += rng.normal(
++                    loc=0.0,
++                    scale=self.obs_noise_std,
++                    size=single.shape,
++                ).astype(np.float32)
++
++            return noisy
++
++    def _sample_episode_randomization(self):
++            """
++            Sample all per-episode random factors:
++            - observation bias
++            - motor thrust gain
++            - frame_skip jitter
++            """
++            rng = getattr(self, "np_random", np.random)
++
++            # Observation bias (e.g., altimeter offset)
++            if self.obs_bias_std > 0.0:
++                self.obs_bias = rng.normal(
++                    loc=0.0,
++                    scale=self.obs_bias_std,
++                    size=self.obs_dim_single,
++                ).astype(np.float32)
++            else:
++                self.obs_bias[:] = 0.0
++
++            # Motor thrust gain error (motors slightly stronger/weaker)
++            if self.motor_scale_std > 0.0:
++                self.motor_scale = float(1.0 + rng.normal(0.0, self.motor_scale_std))
++            else:
++                self.motor_scale = 1.0
++
++            # Frame skip jitter (control frequency variation)
++            if self.frame_skip_jitter > 0:
++                # inclusive low, exclusive high – like randint
++                jitter = int(rng.integers(
++                    -self.frame_skip_jitter,
++                    self.frame_skip_jitter + 1
++                ))
++                self.frame_skip = max(1, self.frame_skip_base + jitter)
++            else:
++                self.frame_skip = self.frame_skip_base
+ 
+-        # if print_actuators:
+-        #     names = [mj.mj_id2name(self.model, mj.mjtObj.mjOBJ_ACTUATOR, i) for i in range(self.nu)]
+-        #     print(f"[CFThrustHoverEnv] mode={self.mode}, nu={self.nu}")
+-        #     print(f"[CFThrustHoverEnv] actuator names: {names}")
+-        #     print(f"[CFThrustHoverEnv] ctrl ranges:\n{np.c_[self.ctrl_low, self.ctrl_high]}")
+ 
+     
+         ##reset function that is responsible for the start of every episode to reset values and returns the inital observaiton and info if needed
+@@ -213,7 +255,7 @@ class CrazyFlieEnv(gym.Env):
+         ##reset each to base values so 0 for all of them
+         ##quaternion position means drone is straight up with no rotation represented by the identity matrix (1,0,0,0)
+         #
+-        self.data.qpos[:] = np.array([0, 0, 0.15, 1, 0, 0, 0], dtype=np.float64)
++        self.data.qpos[:] = np.array([0, 0, 0.01, 1, 0, 0, 0], dtype=np.float64)##reset qpos to 0,0,0.01 as starting pos
+         self.data.qvel[:] = 0.0
+         self.data.ctrl[:] = 0.0#Reset thrust to 0
+         self.u_cmd = self.HOVER_THRUST##reset the filtered thrust back to base hover_thrust
+@@ -222,25 +264,32 @@ class CrazyFlieEnv(gym.Env):
+         self.hover_count = 0
+      
+ 
+-        ##clear the history of thrust oscilations and velocity magnitudes.
+-        self.du_hist.clear()
+-        self.vz_hist.clear()
+-        ##reset the step index
++        self.du_hist.clear()##clear history of thrusts
++        self.vz_hist.clear()##clear history of vertical velocity
+         self.step_idx = 0
++        self.ground_steps = 0
+ 
+-         # --- frame stack reset ---
++        # --- sample per-episode randomization (bias, motor scale, frame_skip) ---
++        self._sample_episode_randomization()
++
++        # --- frame stack reset using NOISY obs (what agent sees) ---
+         self.obs_stack.clear()
+-        single = self._get_single_obs()
++        single_clean = self._get_single_obs()
++        single = self._apply_obs_noise(single_clean)
++
+         for _ in range(self.n_stack):
+             self.obs_stack.append(single.copy())
++
+         if self.n_stack == 1:
+             obs = single
+         else:
+             obs = np.concatenate(list(self.obs_stack), axis=0).astype(np.float32)
++
+         return obs, {}
+ 
++
+     def _apply_thrust(self, u_scalar: float,m_vec:np.ndarray): ####this applies the filtering to the thrust, u_scalar is the thrust aciton
+-        ## in this funciton we perform acutator shaping or thrust smoothing
++        ## in this funciton we perform acutator shaping or thrust smoothing and moments
+         ## u_cmd:current motor thrust
+         ## u_scalar: current requested thrust for the drone
+         ##du :limited thrust change for a single step -- (action_thrust_value - base_thrust_command ) clipped between the maximum thrust change
+@@ -264,35 +313,25 @@ class CrazyFlieEnv(gym.Env):
+ 
+         self.data.ctrl[0] = self.u_cmd
+ 
+-        
+-        # --- Moments: clip & apply to actuators 1:4 ---
+-        # Respect action-space bounds for moments
+-        m_low = self.action_space.low[1:]
+-        m_high = self.action_space.high[1:]
+-        m_clipped = np.clip(m_vec, m_low, m_high)
+-        self.data.ctrl[1:] = m_clipped
+-
+-        # ---- NEW: apply moments + track their change ----
++        # ---- Moments: clip & apply ----
+         m_vec = np.asarray(m_vec, dtype=np.float32)
+ 
+-        # clip to action-space bounds for safety
+-        m_low = self.action_space.low[1:]
+-        m_high = self.action_space.high[1:]
++        # use the full physical actuator range from MuJoCo
++        m_low = -1
++        m_high = 1
+         m_clipped = np.clip(m_vec, m_low, m_high)
+ 
+-        # apply to actuators 1..3
++        # apply to actuators 1..3 (assuming 0=thrust,1=mx,2=my,3=mz)
+         if self.model.nu >= 4:
+             self.data.ctrl[1:4] = m_clipped
+             if self.model.nu > 4:
+                 self.data.ctrl[4:] = 0.0
+ 
+-        # difference from previous moments
+-        dm = m_clipped - self.last_moments  # vector in R^3
+-
+-        # store magnitude of the change for reward term
+-        self.last_dm = float(np.linalg.norm(dm, ord=2))  # L2, you could also use sum(abs)
+-
+-        # update memory
++        # #difference from previous moments
++        dm = m_clipped - self.last_moments
++        # magnitude of the change for smoothness penalty
++        self.last_dm = float(np.linalg.norm(dm, ord=2))
++        # store last applied moments for next step
+         self.last_moments = m_clipped.copy()
+ 
+     def step(self, action: np.ndarray): #
+@@ -300,33 +339,48 @@ class CrazyFlieEnv(gym.Env):
+         # scalar thrust request
+         ##requested thrust is clipped first to be in the action space range
+         # u_req = float(np.clip(np.asarray(action).squeeze(), self.action_space.low[0], self.action_space.high[0]))
+-        action = np.asarray(action, dtype=np.float32).squeeze()
+-        if action.shape == ():  # handle scalar edge-case
++        # Convert to array and sanity-check shape
++        a = np.asarray(action, dtype=np.float32).squeeze()
++        if a.shape == ():
+             raise ValueError("Action must be 4D: [thrust, mx, my, mz]")
+ 
+-        # Clip to action space
+-        a_clipped = np.clip(action, self.action_space.low, self.action_space.high)
++        # --- action randomization / noise ---
++        if self.action_noise_std > 0.0:
++            rng = getattr(self, "np_random", np.random)
++            a = a + rng.normal(0.0, self.action_noise_std, size=a.shape).astype(np.float32)
++
++        # Clip to valid action space
++        a_clipped = np.clip(a, self.action_space.low, self.action_space.high)
++
++        # Split into thrust + moments
+         u_req = float(a_clipped[0])
+         m_req = a_clipped[1:4]
+-        self._apply_thrust(u_req,m_req)##send thrust to be filtered and applied to the data.ctrl
+ 
+-        # advance the physics step by sending in our data 
+-        
++        # Apply per-episode motor scaling on thrust
++        u_req = float(u_req * self.motor_scale)
++        # Re-clip thrust after scaling
++        u_req = float(np.clip(u_req, self.action_space.low[0], self.action_space.high[0]))
++
++        # Send to actuator shaping (low-pass + slew) and MuJoCo
++        self._apply_thrust(u_req, m_req)
++
++        # advance the physics step
+         for _ in range(self.frame_skip):
+             mj.mj_step(self.model, self.data)
+         self.step_idx += 1
+-
+-
+       
+-        # Single-frame obs (used for reward & termination)
+-        single = self._get_single_obs()
++         # Clean single observation from MuJoCo
++        single_clean = self._get_single_obs()
+ 
+-          # Update frame stack and build stacked obs for the agent
++        # Noisy obs for the agent
++        single = self._apply_obs_noise(single_clean)
++
++        # Frame stack update with noisy obs
+         if self.n_stack == 1:
+             obs = single
+         else:
+-            # initialize stack if empty (e.g., first step after reset)
+             if len(self.obs_stack) == 0:
++                # If something cleared it, repopulate
+                 for _ in range(self.n_stack):
+                     self.obs_stack.append(single.copy())
+             else:
+@@ -337,138 +391,180 @@ class CrazyFlieEnv(gym.Env):
+       
+       
+         ##from the 13d obs array retrieve any relevant obs variables
+-        x, y, z = float(single[0]), float(single[1]), float(single[2])
+-        qw, qx, qy, qz = single[3:7]
+-        vx, vy, vz = single[7:10]
+-        wx, wy, wz = single[10:13]
++        x, y, z = float(single_clean[0]), float(single_clean[1]), float(single_clean[2])
++        qw, qx, qy, qz = single_clean[3:7]
++        vx, vy, vz = single_clean[7:10]
++        wx, wy, wz = single_clean[10:13]
+         height_err = abs(z - self.target_z) ##height_err is how far we are from target height
+         above = z - self.target_z ##above -- how far above the target are we?If z<target then we will be negative values above target(since above is +)
+-
++        
++        
+         # update smoothness trackers
+         self.du_hist.append(self.last_du)##add to the histories the vertical velocity and last_du which is difference in thrust between currently applied thrust and last applied thrust
+         self.vz_hist.append(abs(vz))
+ 
+-        # ---------- Reward ----------
++        
+ 
+         ## the final reward is calculated like reward = (closeness to target) + (moving in direction of target) - (go too fast near target) -
+         ## (be above target)-(tilt/wander)-(be jerky)-(waste energy)
+-        # # ---------- Reward ----------
++        
++
++               # ---------- Reward ----------
++       
+ 
+-                # ---------- Reward ----------
++        ##ground stall bookkeeping
++        # Count how long we stay basically on the floor and not moving up, penalize every step on the ground
++        ground_penalty =0
++        if (z < 0.015) and (abs(vz) < 0.05):
++            
++            self.ground_steps += 1
++            ground_penalty-=0.5
++        else:
++            # As soon as we get off the ground or move, reset
++            self.ground_steps = 0
++          
+ 
+-        # 0) Compute tilt angle from quaternion (roll/pitch, ignore yaw).
++        ## tilt angle from quaternion (roll/pitch, ignore yaw), how far you are from being upright
+         tilt_sin = np.sqrt(qx**2 + qy**2)
+         tilt_sin = np.clip(tilt_sin, 0.0, 1.0)
+         tilt_angle = 2.0 * np.arcsin(tilt_sin)  # radians, 0 = upright
+ 
+-        # 1) closeness to target height (symmetric in above/below)
+-        reward = 1.4 * (1.0 - np.tanh(6.0 * height_err))
+-
+-        # 2) directional progress in z: only when far from target
+-        toward = (self.target_z - z) * vz
+-        if height_err > self.band * 2.0:
+-            reward += 0.9 * np.tanh(toward / 0.25)
+-
+-        # 3) vertical speed near target
+-        near = np.exp(- (height_err / max(self.band * 2.0, 1e-6))**2)
+-        reward -= (0.15 + 0.65 * near) * abs(vz)
+-
+-        # 4) above-target penalties (anti-overshoot)
+-        if above > 0.0:
+-            reward -= 3.0 * above    # stronger linear
+-            if z > self.soft_ceiling:
+-                reward -= 40.0 * (z - self.soft_ceiling) ** 2
++        ## Height error and relative error w.r.t. target_z
++        ##
++        dz = z - self.target_z                    # [m]
++        h_scale = max(self.target_z, 1e-3)        # avoid divide-by-zero
++        dz_rel = dz / h_scale                     # dimensionless
++
++        # 1) Height tracking: quadratic well around target_z (relative)
++        k_z = 2.0
++        r_z = -k_z * (dz_rel ** 2)
++
++        # 2) Progress shaping in height (relative error improvement)
++        prev_err_rel = abs(self.prev_dz) / h_scale
++        curr_err_rel = abs(dz) / h_scale
++        k_prog = 3.0
++        r_progress = k_prog * np.clip(prev_err_rel - curr_err_rel, -0.2, 0.2)
++        self.prev_dz = dz  # update for next step
++
++        # 3) Vertical velocity penalty, stronger when near target (relative "near")
++        near = np.exp(- (dz_rel / 0.1) ** 2)   # ~10% of target height
++        k_vz_far  = 0.1
++        k_vz_near = 2.0
++        r_vz = -(k_vz_far + k_vz_near * near) * (vz ** 2)
++
++        # 4) Lateral position & velocity: stay near (0,0) and don't drift sideways
++        k_xy  = 1.0
++        k_vxy = 0.2
++        r_xy   = -k_xy  * (x**2 + y**2)
++        r_vxy  = -k_vxy * (vx**2 + vy**2)
++
++        # 5) Uprightness & angular rates
++        k_tilt      = 2.0
++        k_omega_rp  = 0.05   # roll + pitch rates
++        k_omega_y   = 0.01   # yaw rate
++        r_tilt  = -k_tilt * (tilt_angle ** 2)
++        r_omega = -k_omega_rp * (wx**2 + wy**2) - k_omega_y * (wz**2)
++
++        # Upright bonus: extra positive shaping when close to upright
++        upright_scale = 0.5                     # max bonus per step
++        upright_width = np.deg2rad(8.0)         # around ±8 degrees
++        upright_bonus = upright_scale * np.exp(- (tilt_angle / upright_width) ** 2)
++
++        # 6) Control effort & smoothness (torques + thrust changes)
++        m_mag2 = float(np.dot(self.last_moments, self.last_moments))  # ||m||^2
++        k_moment_abs   = 0.02
++        k_moment_jump  = 0.05
++        k_thrust_jump  = 0.2
++
++        r_moment_abs    = -k_moment_abs  * m_mag2
++        r_moment_jump   = -k_moment_jump * self.last_dm
++        r_thrust_smooth = -k_thrust_jump * self.last_du
++
++        # 7) Takeoff shaping (relative climb toward target)
++        r_takeoff = 0.0
++        if z < 0.02:
++            # sitting on the ground is slightly bad
++            r_takeoff -= 0.05
++        elif z < self.target_z - 0.10:
++            # reward being some fraction of the way up to target
++            frac = np.clip(z / h_scale, 0.0, 1.0)
++            r_takeoff += 0.1 * frac
++
++        # 8) Soft ceiling shaping: discourage overshooting far above target
++        if z > self.soft_ceiling:
++            k_ceiling = 5.0
++            r_ceiling = -k_ceiling * (z - self.soft_ceiling) ** 2
++        else:
++            r_ceiling = 0.0
++
++        # Combine all reward terms
++        reward = (
++            r_z + r_progress +
++            r_vz +
++            r_xy + r_vxy +
++            r_tilt + r_omega +
++            r_moment_abs + r_moment_jump + r_thrust_smooth +
++            r_takeoff + r_ceiling +
++            upright_bonus
++            +ground_penalty
++        )
+ 
+-        # 5) attitude + lateral position
+-        k_tilt = 2.0      # rad^-2
+-        k_xy   = 3.0      # m^-2
+-        reward -= k_tilt * (tilt_angle ** 2)
+-        reward -= k_xy * (x**2 + y**2)
++        # -Hover band bonus (relative to target height) 
++        tilt_ok = tilt_angle < np.deg2rad(10.0)
++        dz_band_rel = self.band / h_scale   # band in "fraction of target height"
++        in_band = (abs(dz_rel) <= dz_band_rel) and (abs(vz) < 0.05) and tilt_ok
+ 
+-        # 6) lateral velocity penalty: discourage sideways drift
+-        k_vxy = 1.0       # (m/s)^-2
+-        reward -= k_vxy * (vx**2 + vy**2)
++        if in_band:
++            self.hover_count += 1
++            reward += 1.0    # per-step bonus for really good hover
++        else:
++            self.hover_count = 0
+ 
+-        # 7) angular rate penalty
+-        k_omega_rp = 0.10
+-        k_omega_y  = 0.02
+-        reward -= k_omega_rp * (wx**2 + wy**2)
+-        reward -= k_omega_y * (wz**2)
++        # Long, smooth hover -> early success
++        if self.hover_count >= self.hover_required:
++            mean_vz = float(np.mean(self.vz_hist)) if len(self.vz_hist) else 999.0
++            mean_du = float(np.mean(self.du_hist)) if len(self.du_hist) else 999.0
++            if mean_vz < 0.04 and mean_du < 0.010:
++                reward += 50.0
++                return obs, reward, True, False, {
++                    "success": True,
++                    "hover_steps": self.hover_count,
++                    "mean_vz": mean_vz,
++                    "mean_du": mean_du,
++                }
+ 
+-        
+ 
+-        # 8) thrust smoothness penalty
+-        reward -= 0.5 * self.last_du
+-           # 8b) Smoothness: penalize moment jumps (changes in [mx,my,mz])
+-        k_moment_jump = 2.0  # tune this; higher => smoother attitude control
+-        reward -= k_moment_jump * self.last_dm
+ 
+-        # 9) energy bias near hover thrust
+-        reward -= 0.0003 * abs(self.u_cmd - self.HOVER_THRUST)
++        if self.ground_steps >= self.max_ground_steps:
++            reward -= 100  # or 50.0
++            return obs, reward, True, False, {
++                "crash": True,
++                "reason": "stalled_on_ground",
++                "ground_steps": self.ground_steps,
++            }
+ 
+-        # 10) strong downward penalty when below target, especially near ground
+-        if z < self.target_z and vz < 0.0:
+-            below = self.target_z - z
+-            ground_factor = np.exp(- (z / max(self.target_z, 1e-6))**2)
+-            # Make this MUCH stronger
+-            reward -= 10.0 * ground_factor * below * abs(vz)
+-        # --- crashes / bounds ---
+ 
+         # Ground / NaN crash
+         if z < 0.01 or np.any(np.isnan(obs)) or np.any(np.isinf(obs)):
+-            reward -= 200.0
++            reward -= 100
+             return obs, reward, True, False, {"crash": True, "reason": "nan_or_below_ground"}
+ 
+         # Flip crash
+         if tilt_angle > np.deg2rad(120.0):
+-            reward -= 200.0
++            reward -= 100
+             return obs, reward, True, False, {"crash": True, "reason": "flipped"}
+ 
+         # Hard ceiling termination
+         if z > self.hard_ceiling:
+-            reward -= 200.0
++            reward -= 50
+             return obs, reward, True, False, {"ceiling": True}
+ 
+         # Lateral bounds (keep around origin)
+         r_xy = np.sqrt(x**2 + y**2)
+         if r_xy > 0.8:  # 0.8m radius, not 8m
+-            reward -= 200.0
++            reward -= 50
+             return obs, reward, True, False, {"crash": True, "reason": "out_of_bounds"}
+ 
+-        # --- hover shaping / success ---
+-
+-        tilt_ok = tilt_angle < np.deg2rad(10.0)
+-        if tilt_ok:
+-            reward += 0.1
+-        else:
+-            reward -= 0.5   # <--- actually subtract now
+-
+-        in_band = (height_err <= self.band) and (abs(vz) < 0.05) and tilt_ok
+-
+-        # If we had a good hover for a while, leaving the band is painful
+-        if (not in_band) and (self.hover_count > 200):
+-            reward -= 200.0
+-           
+-
+-        
+-
+-        if in_band:
+-            self.hover_count += 1
+-            reward += 2.0
+-        else:
+-            self.hover_count = 0
+-
+-        if self.hover_count >= self.hover_required:
+-            mean_vz = float(np.mean(self.vz_hist)) if len(self.vz_hist) else 999.0
+-            mean_du = float(np.mean(self.du_hist)) if len(self.du_hist) else 999.0
+-            if mean_vz < 0.04 and mean_du < 0.010:
+-                reward += 200.0
+-                return obs, reward, True, False, {
+-                    "success": True,
+-                    "hover_steps": self.hover_count,
+-                    "mean_vz": mean_vz,
+-                    "mean_du": mean_du,
+-                }
+ 
+         terminated = False
+         truncated = self.step_idx >= self.max_steps
+@@ -505,36 +601,3 @@ class CrazyFlieEnv(gym.Env):
+         stacked = np.concatenate(list(self.obs_stack), axis=0).astype(np.float32)
+         return stacked
+ 
+-
+-    # ---------- Rendering (rgb_array) ----------
+-
+-    # def _apply_follow_camera(self):
+-    #     if self._renderer is None or self._follow_bid is None:
+-    #         return
+-    #     target = self.data.xpos[self._follow_bid].copy()
+-    #     cam = self._renderer.cam
+-    #     cam.type = mj.mjtCamera.mjCAMERA_FREE
+-    #     cam.lookat[:] = target
+-    #     cam.distance = self._cam_distance
+-    #     cam.elevation = self._cam_elevation
+-    #     cam.azimuth = self._cam_azimuth
+-
+-    # def render(self) -> Optional[np.ndarray]:
+-    #     if self.render_mode == "rgb_array":
+-    #         if self._renderer is None:
+-    #             self._renderer = mj.Renderer(self.model, height=self._height, width=self._width)
+-    #         if self._camera_name is not None:
+-    #             self._renderer.update_scene(self.data, camera=self._camera_name)
+-    #         else:
+-    #             self._apply_follow_camera()
+-    #             self._renderer.update_scene(self.data)
+-    #         img = self._renderer.render()
+-    #         return np.clip(img * 255.0, 0, 255).astype(np.uint8)
+-    #     elif self.render_mode == "human":
+-    #         return None
+-    #     return None
+-
+-    # def close(self):
+-    #     if self._renderer is not None:
+-    #         self._renderer.close()
+-    #         self._renderer = None
+diff --git a/src/EvaluationComplex.py b/src/EvaluationComplex.py
+index d3dfb9a..b39e716 100644
+--- a/src/EvaluationComplex.py
++++ b/src/EvaluationComplex.py
+@@ -23,6 +23,37 @@ from stable_baselines3.common.monitor import Monitor
+ ##alter mujocco step for 10 steps rather than 1 physics step
+ 
+ 
++
++##change xml value for thrust range
++##parallel environment implementation
++##introduce complexity to action space 
++##for drone api figure out which things we can control
++##use weights and biases then run hyperparameter suite over night
++#reduce entropy gain/loss
++##reduce episode length and increase episode count
++## have at least 3 seeds
++
++##in action space add penalty for difference in previous and current action to prevent large thrust
++##for input to pokicy add a history of states called frame stacking
++##next 2 weeks, add guasian noise for domain randomization
++##alter mujocco step for 10 steps rather than 1 physics step
++
++
++##Week 10
++##look at seeds for hyperparameter tuning 
++##randomize hover heights and phases to help drone learnign with height 
++##add some noises
++##domain randomization
++##randomize the observations that came back from the drone, randomize the actions, randomize the the physics steps
++##add safety controls for certain pitch/rolls to catch issues or if it goes past a certain point, limit
++##
++
++
++##add some gausian noise(randomize actions, rnadomize the physcs steps etc.)
++##do hyperparameter sweep over night with some seeds
++##add safety controls for certain pitch/rolls to catch issues or if it goes past a certain point
++##work on actual environment
++
+ from CrazyFlieEnvComplex import CrazyFlieEnv
+ 
+ 
+@@ -37,11 +68,11 @@ if __name__ == "__main__":
+     here = os.path.dirname(__file__)
+     xml_path = os.path.abspath(os.path.join(here, "..", "Assets", "bitcraze_crazyflie_2", "scene.xml"))
+     ##path to models and the specific model zip file
+-    models_dir = os.path.abspath(os.path.join(here, "..", "models", "Complex", f"seed_{0}", "seed_2"))
+-    model_path = os.path.join(models_dir, "complex.zip")
+-    norm_path  = os.path.join(models_dir, "vecnormalize.pkl")
++    models_dir = os.path.abspath(os.path.join(here, "..", "models", "Complex2_DR"))
++    model_path = os.path.join(models_dir, "complex_dr.zip")
++    norm_path  = os.path.join(models_dir, "vecnormalize_dr.pkl")
+ 
+-    TARGET_Z  = 0.5
++    TARGET_Z  = 1
+     MAX_STEPS = 1500
+ 
+     #this loads the trained model(which is the neural network weights and training hyperparameters fromt he disk)
+@@ -58,10 +89,17 @@ if __name__ == "__main__":
+         xml_path=xml_path,
+         target_z=TARGET_Z,
+         max_steps=MAX_STEPS,
+-        n_stack=4
+-      
+-        # render_mode=None because we'll use the interactive viewer below
+-    )## we don't wrap it with dummyVecEnv because mujocco only works with a single env
++        n_stack=4,
++        hover_required_steps=600,
++        # Evaluation: no extra noise (or use milder values)
++        obs_noise_std=0.005,
++        obs_bias_std=0.01,
++        action_noise_std=0.005,
++        motor_scale_std=0.02,  # ±2% thrust gain
++        frame_skip=10,
++        frame_skip_jitter=1,  
++    )
++## we don't wrap it with dummyVecEnv because mujocco only works with a single env
+     obs_raw, _ = env.reset()
+     dt_sim = env.model.opt.timestep
+     dt_step = dt_sim * env.frame_skip 
+diff --git a/src/Old/CrazyFlieEnvMain.py b/src/Old/CrazyFlieEnvMain.py
+index 5707807..687e0d0 100644
+--- a/src/Old/CrazyFlieEnvMain.py
++++ b/src/Old/CrazyFlieEnvMain.py
+@@ -316,17 +316,25 @@ class CrazyFlieEnv(gym.Env):
+ 
+         # Early success: in band and calm
+         in_band = height_err <= self.band and abs(vz) < 0.05
++        if(not in_band and self.hover_count>200):
++            reward-=100
++
+         if in_band: ##if the height_err which is the distance between the drone and the target is within the band, so if the drone is and vertical velocity is less than 0.05
+             ##then increment hover_count as a successful hover step
+             self.hover_count += 1
++            reward+=1
+         else:##if outside band, then decrement the hover counter by 1 but don't let it go belpw 0
+-            self.hover_count = max(0, self.hover_count - 1)
++            # self.hover_count = max(0, self.hover_count - 1)
++            self.hover_count = 0
++            
++
++       
+ 
+         if self.hover_count >= self.hover_required:## if we reach hover counter
+             mean_vz = float(np.mean(self.vz_hist)) if len(self.vz_hist) else 999.0 ##get averges over the vertical velocity in the last smoothing_window
+             mean_du = float(np.mean(self.du_hist)) if len(self.du_hist) else 999.0## get the averges of thrust change in last smoothing_indow
+             if mean_vz < 0.04 and mean_du < 0.010:## so if the average  vertical velocity is that and sam as thrust chnge then that constitutes successful hover
+-                reward += 50.0
++                reward += 200.0
+                 return obs, reward, True, False, {
+                     "success": True,
+                     "hover_steps": self.hover_count,
+diff --git a/src/Old/Evaluation.py b/src/Old/Evaluation.py
+index ab1b02a..bc020cc 100644
+--- a/src/Old/Evaluation.py
++++ b/src/Old/Evaluation.py
+@@ -23,13 +23,28 @@ from stable_baselines3.common.monitor import Monitor
+ ##alter mujocco step for 10 steps rather than 1 physics step
+ 
+ 
+-from CrazyFlieEnvMain import CrazyFlieEnv
++##Week 10
++##look at seeds for hyperparameter tuning 
++##randomize hover heights and phases to help drone learnign with height 
++##add some noises
++##domain randomization
++##randomize the observations that came back from the drone, randomize the actions, randomize the the physics steps
++##add safety controls for certain pitch/rolls to catch issues or if it goes past a certain point, limit
++##
++
++
++##add some gausian noise(randomize actions, rnadomize the physcs steps etc.)
++##do hyperparameter sweep over night with some seeds
++##add safety controls for certain pitch/rolls to catch issues or if it goes past a certain point
++##work on actual environment
++
++from CrazyFlieEnvComplex import CrazyFlieEnv
+ 
+ 
+ # Build a tiny vec env only to load VecNormalize stats
+ def _make_norm_loader(xml_path: str, target_z: float, max_steps: int):##factor function to load the environemnt
+     def _thunk():
+-        return Monitor(CrazyFlieEnv(xml_path=xml_path, target_z=target_z, max_steps=max_steps))
++        return Monitor(CrazyFlieEnv(xml_path=xml_path, target_z=target_z, max_steps=max_steps,hover_required_steps=300))
+     return DummyVecEnv([_thunk])
+ 
+ 
+@@ -61,46 +76,65 @@ if __name__ == "__main__":
+       
+         # render_mode=None because we'll use the interactive viewer below
+     )## we don't wrap it with dummyVecEnv because mujocco only works with a single env
+-    obs, _ = env.reset()
++    obs_raw, _ = env.reset()
+     dt_sim = env.model.opt.timestep
++    dt_step = dt_sim * env.frame_skip 
+ 
+     #  Launch MuJoCo's interactive viewer; step the env and sync the window
+     with mujoco.viewer.launch_passive(env.model, env.data) as viewer:
+         terminated = False
+         truncated = False
+         ep_return = 0.0
++
++       
+       
+         # simple 1 Hz HUD print
+         t0 = time.time()
+         last_print = t0
+-
+         while not (terminated or truncated):
+-            # normalize observation like during training (batch dimension required)
+-           
+-            obs_n = vecnorm.normalize_obs(obs[None, :])
++            
++            obs_norm = vecnorm.normalize_obs(obs_raw[None, :])  # shape (1, obs_dim)
+ 
+-            # policy prediction (deterministic for evaluation)
+-            action, _ = model.predict(obs_n, deterministic=True)
+-            # action can be shape (1,) or (1,1); reduce to scalar
+-            u = float(np.asarray(action).squeeze())
++            # Policy prediction (deterministic for evaluation)
++            action, _ = model.predict(obs_norm, deterministic=True)
+ 
+-            # step env with scalar thrust
+-            obs, reward, terminated, truncated, info = env.step(u)
+-            print(obs,info)
+-            ep_return += reward
++            # Make sure it's a NumPy array
++            action = np.asarray(action, dtype=np.float32)
++            if action.ndim == 2:
++                a = action[0]     # (4,)
++            else:
++                a = action        # (4,)
+ 
+-            # update viewer
++            thrust = float(a[0])
++            mx = float(a[1])
++            my = float(a[2])
++            mz = float(a[3])
++
++            # Step the *real* env with this action (un-normalized env)
++            obs_raw, reward, terminated, truncated, info = env.step(a)
++            ep_return += float(reward)
++
++            # Logging values from *raw* obs
++            x, y, z = float(obs_raw[0]), float(obs_raw[1]), float(obs_raw[2])
++            vx, vy, vz = float(obs_raw[7]), float(obs_raw[8]), float(obs_raw[9])
++
++            # Update viewer
+             viewer.sync()
+ 
+-            # Print a tiny HUD each second
++            # HUD at ~1 Hz
+             now = time.time()
+-           
+             if now - last_print >= 1.0:
+-                z = float(obs[2])
+-                vz = float(obs[9])
+-                print(f"t={int(now - t0):2d}s | z={z:+.3f} m  vz={vz:+.3f} m/s  thrust={u:.3f}  R={ep_return:.1f}")
+                 last_print = now
+-            time.sleep(dt_sim*10)
+-            
+-
+-        print(f"\nEpisode finished. Return={ep_return:.2f}, terminated={terminated}, truncated={truncated}")
++                R = float(ep_return)
++                print(
++                    f"t={int(now - t0):2d}s | "
++                    f"z={z:+.3f} m  vz={vz:+.3f} m/s  "
++                    f"thrust={thrust:.3f}, "
++                    f"(x,y,z)=({x:+.3f},{y:+.3f},{z:+.3f})  "
++                    f"R={R:.1f}"
++                )
++
++            # Match real time: 1 env.step = frame_skip * dt_sim seconds
++            time.sleep(dt_step)
++
++    print(f"\nEpisode finished. Return={ep_return:.2f}, terminated={terminated}, truncated={truncated}, Info: {info}")
+\ No newline at end of file
+diff --git a/src/Old/Train.py b/src/Old/Train.py
+index 42711fe..7f11689 100644
+--- a/src/Old/Train.py
++++ b/src/Old/Train.py
+@@ -8,12 +8,16 @@ from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
+ ##since SB3 expects vectorized enviornments
+ ## VecNormalize normalizes the environment
+ 
+-from CrazyFlieEnvMain import CrazyFlieEnv
++from CrazyFlieEnvComplex import CrazyFlieEnv
+ 
+ ##factory function, a function that returns another function
+-def make_env(xml_path: str, target_z: float, max_steps: int = 1500):##Sb3 expects a function that returns a function to return the environment wrapped with the monitor
++def make_env(xml_path: str, target_z: float, max_steps: int = 1000, rank:int = 0):##Sb3 expects a function that returns a function to return the environment wrapped with the monitor
+     def _f():
+-        return Monitor(CrazyFlieEnv(xml_path=xml_path, target_z=target_z, max_steps=max_steps))
++
++        env = CrazyFlieEnv(xml_path=xml_path, target_z=target_z, max_steps=max_steps)
++        env = Monitor(env)
++        env.reset(seed=rank)
++        return env
+     return _f
+ 
+ 
+@@ -33,8 +37,12 @@ if __name__ == "__main__":
+     ##environment paramater constants
+     TARGET_Z = 0.5
+     MAX_STEPS = 1500
++    N_ENVS = 2  # or 4, 16, etc.
++
++
++    env_fns = [make_env(xml_path, TARGET_Z, MAX_STEPS, rank=i) for i in range(N_ENVS)]
+     ##venv is vectorized environment, dummyVec expects an array of factory functions for a single envrionemnt to vectorize the environment
+-    venv = DummyVecEnv([make_env(xml_path, TARGET_Z, MAX_STEPS)])
++    venv = DummyVecEnv(env_fns=env_fns)
+     venv = VecNormalize(venv, norm_obs=True, norm_reward=True, clip_obs=10.0)##scales the venv to normalized values for rewards and observations
+ 
+     model = PPO(
+@@ -47,7 +55,7 @@ if __name__ == "__main__":
+         gamma=0.99,##discount factor, how much agent values future rewards over immediete
+         gae_lambda=0.95,##generalized advantage estimation(GAE) it reduces noise when estimating how good an action was. 
+         clip_range=0.2, ##PPO clips how much the new policy can change from the old one, it prevents instability and huge policy shifts
+-        ent_coef=0.01, ###entropy coefficient, entropy is the randomness which encourages exploraiton in the loss funciton, higher means more exploraiton, lower means exploit what is already known
++        ent_coef=0.001, ###entropy coefficient, entropy is the randomness which encourages exploraiton in the loss funciton, higher means more exploraiton, lower means exploit what is already known
+         vf_coef=0.5,##how much value funciton loss(critic) contributes in compairson wiht policy loss and entropy bonus
+         policy_kwargs=dict(net_arch=[64, 64]),##architecture for neural network, two hidden layers of 64 neurons,
+         tensorboard_log=logs_dir,##logs tensorboard log files into the logs director
+@@ -56,7 +64,7 @@ if __name__ == "__main__":
+     
+     ##train the model by running it for a total_timsetep amount of simulation steps, each step is a single env.step() call
+     ##total_timsteps/episode_steps = (100,000)/1500=66 episodesroughly
+-    model.learn(total_timesteps=200000, progress_bar=True)
++    model.learn(total_timesteps=1000000, progress_bar=True)
+ 
+     model.save(os.path.join(models_dir, "test.zip"))##saved the train model
+     venv.save(os.path.join(models_dir, "vecnormalize.pkl"))##also saved normalization stats
+diff --git a/src/Old/multi_random_policy.py b/src/Old/multi_random_policy.py
+deleted file mode 100644
+index 31fc3c0..0000000
+--- a/src/Old/multi_random_policy.py
++++ /dev/null
+@@ -1,60 +0,0 @@
+-# Multi (2) drone, random policy
+-
+-import os
+-import time
+-import mujoco.viewer
+-from CrazyFlieEnv import CrazyflieEnv
+-
+-
+-scenePath = os.path.join(
+-    os.path.dirname(__file__),
+-    "..",
+-    "Assets", 
+-    "bitcraze_crazyflie_2", 
+-    "scene_multi.xml"
+-)
+-
+-env = CrazyflieEnv(scenePath, 2)
+-
+-
+-# Training example (using random policy for now)
+-num_episodes = 5
+-max_steps = 500
+-
+-for ep in range(num_episodes):
+-    obs, _ = env.reset()
+-    total_reward = 0
+-
+-    for step in range(max_steps):
+-        # We can replace this random sampling with a policy
+-        action = env.action_space.sample()
+-        obs, reward, done, _, _ = env.step(action)
+-        total_reward += reward
+-
+-        if done:
+-            print(f"Episode {ep+1} ended after {step+1} steps with reward: {total_reward:.2f}")
+-            break
+-    else:
+-        print(f"Episode {ep+1} ran all steps ({max_steps}) with reward: {total_reward:.2f}")
+-
+-env.close()
+-
+-
+-# Evaluation / Visualization - use learned policy and visualize in the sim
+-obs, _ = env.reset()
+-with mujoco.viewer.launch_passive(env.model, env.data) as viewer:
+-    print("\nRunning final visualization based on learned policy (RANDOM FOR NOW)")
+-    for step in range(max_steps):
+-        # Replace the random sampling here with a trained policy
+-        action = env.action_space.sample()  
+-
+-        obs, reward, done, _, _ = env.step(action)
+-
+-        viewer.sync()
+-        time.sleep(1/60)
+-
+-        if done:
+-            print(f"Simulation ended early at step {step+1}")
+-            break
+-    else:
+-        print(f"Simulation ran all {max_steps} steps\n")
+diff --git a/src/Old/random_policy.py b/src/Old/random_policy.py
+deleted file mode 100644
+index 4aebe24..0000000
+--- a/src/Old/random_policy.py
++++ /dev/null
+@@ -1,60 +0,0 @@
+-# Single drone, random policy
+-
+-import os
+-import time
+-import mujoco.viewer
+-from CrazyFlieEnv import CrazyflieEnv
+-
+-
+-scenePath = os.path.join(
+-    os.path.dirname(__file__),
+-    "..",
+-    "Assets", 
+-    "bitcraze_crazyflie_2", 
+-    "scene.xml"
+-)
+-
+-env = CrazyflieEnv(scenePath)
+-
+-
+-# Training example (using random policy for now)
+-num_episodes = 5
+-max_steps = 500
+-
+-for ep in range(num_episodes):
+-    obs, _ = env.reset()
+-    total_reward = 0
+-
+-    for step in range(max_steps):
+-        # We can replace this random sampling with a policy
+-        action = env.action_space.sample()
+-        obs, reward, done, _, _ = env.step(action)
+-        total_reward += reward
+-
+-        if done:
+-            print(f"Episode {ep+1} ended after {step+1} steps with reward: {total_reward:.2f}")
+-            break
+-    else:
+-        print(f"Episode {ep+1} ran all steps ({max_steps}) with reward: {total_reward:.2f}")
+-
+-env.close()
+-
+-
+-# Evaluation / Visualization - use learned policy and visualize in the sim
+-obs, _ = env.reset()
+-with mujoco.viewer.launch_passive(env.model, env.data) as viewer:
+-    print("\nRunning final visualization based on learned policy (RANDOM FOR NOW)")
+-    for step in range(max_steps):
+-        # Replace the random sampling here with a trained policy
+-        action = env.action_space.sample()  
+-
+-        obs, reward, done, _, _ = env.step(action)
+-
+-        viewer.sync()
+-        time.sleep(1/60)
+-
+-        if done:
+-            print(f"Simulation ended early at step {step+1}")
+-            break
+-    else:
+-        print(f"Simulation ran all {max_steps} steps\n")
+diff --git a/src/Tests/hover_test.py b/src/Tests/hover_test.py
+index 255bbc3..a448031 100644
+--- a/src/Tests/hover_test.py
++++ b/src/Tests/hover_test.py
+@@ -20,6 +20,7 @@ def hover_test():
+ 
+     model = mujoco.MjModel.from_xml_path(path)
+     data = mujoco.MjData(model)
++    print(model.opt.timestep)
+ 
+     # Base hover thrust (keeps the drone at a stationary hover in this case, counteracts gravity)
+     BASE_THRUST = 0.26487 ## weight = mass (0.027 kg) x gravity (9.81 m/s^2)
+diff --git a/src/TrainComplex.py b/src/TrainComplex.py
+index 05e79a2..ed1dfea 100644
+--- a/src/TrainComplex.py
++++ b/src/TrainComplex.py
+@@ -11,72 +11,85 @@ from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
+ from CrazyFlieEnvComplex import CrazyFlieEnv
+ 
+ ##factory function, a function that returns another function
+-def make_env(xml_path: str, target_z: float, max_steps: int = 1000, rank:int = 0, base_seed:int = 0):##Sb3 expects a function that returns a function to return the environment wrapped with the monitor
++def make_env(xml_path: str, target_z: float, max_steps: int = 1500, rank: int = 0):
+     def _f():
+-
+-        env = CrazyFlieEnv(xml_path=xml_path, target_z=target_z, max_steps=max_steps, n_stack=4)
++        env = CrazyFlieEnv(
++            xml_path=xml_path,
++            target_z=target_z,
++            max_steps=max_steps,
++            n_stack=4,
++            hover_required_steps=600,
++            # <-- add domain randomization params here
++            **DR_PARAMS,
++        )
+         env = Monitor(env)
+-        env.reset(seed=rank+base_seed)
+-        env.action_space.seed(base_seed + 10_000 + rank)
++        env.reset(seed=rank)
+         return env
+     return _f
+ 
+ 
++
+ if __name__ == "__main__":
++    # Domain randomization settings used for TRAINING
++    DR_PARAMS = dict(
++        obs_noise_std=0.0,
++        obs_bias_std=0.0,
++        action_noise_std=0.0,
++        motor_scale_std=0.0,  # ±5% thrust gain
++        frame_skip=10,
++        frame_skip_jitter=0,   # frame skip in [8, 12]
++    )
+     here = os.path.dirname(__file__)
+ 
+     # Point to your MuJoCo scene.xml (adjust path to your repo layout)
+     ##xml path for the crazyflydrone
+     xml_path = os.path.abspath(os.path.join(here, "..", "Assets", "bitcraze_crazyflie_2", "scene.xml"))
+     ##directory to save the models from training
+-    models_dir = os.path.abspath(os.path.join(here, "..", "models", "Complex"))
++    models_dir = os.path.abspath(os.path.join(here, "..", "models", "Complex2"))
+     ##where to save the logging for tensorboard
+-    logs_dir = os.path.abspath(os.path.join(here, "..", "logsComplex"))
++    logs_dir = os.path.abspath(os.path.join(here, "..", "logsComplex2"))
+     os.makedirs(models_dir, exist_ok=True)
+     os.makedirs(logs_dir, exist_ok=True)
+ 
+     ##environment paramater constants
+-    TARGET_Z = 0.5
+-    MAX_STEPS = 1000
++    TARGET_Z = 1
++    MAX_STEPS = 1500
+     N_ENVS = 8  # or 4, 16, etc.
+-    SEEDS = [0, 1, 2]
++    SEEDS = [0]
++
+     
+-    for seed in SEEDS:
+-        
+-        models_dir = os.path.join(models_dir, f"seed_{seed}")
+-        logs_dir   = os.path.join(logs_dir,   f"seed_{seed}")
+-        os.makedirs(models_dir, exist_ok=True)
+-        os.makedirs(logs_dir, exist_ok=True)
+-        env_fns = [make_env(xml_path, TARGET_Z, MAX_STEPS, rank=i,base_seed=seed) for i in range(N_ENVS)]
+-        ##venv is vectorized environment, dummyVec expects an array of factory functions for a single envrionemnt to vectorize the environment
+-        venv = DummyVecEnv(env_fns=env_fns)
+-        venv = VecNormalize(venv, norm_obs=True, norm_reward=True, clip_obs=10.0)##scales the venv to normalized values for rewards and observations
++    
++  
++    env_fns = [make_env(xml_path, TARGET_Z, MAX_STEPS, rank=i) for i in range(N_ENVS)]
++    ##venv is vectorized environment, dummyVec expects an array of factory functions for a single envrionemnt to vectorize the environment
++    venv = DummyVecEnv(env_fns=env_fns)
++    venv = VecNormalize(venv, norm_obs=True, norm_reward=True, clip_obs=10.0)##scales the venv to normalized values for rewards and observations
+ 
+-        model = PPO(
+-            "MlpPolicy", ##multilayered perceptron(which is default in sb3)
+-            venv, ##pass in our vectorized environment, PPO expects this
+-            learning_rate=3e-4, ##how fast weights update during gradient descent(smaller = slower but more stable)
+-            n_steps=2048, ## how many steps of experience to collect before each training update. Runs the environment for n_steps and then stores all the info(obs,action,reward) and do gradient updates (large leads to mroe stable gradients but more memory use)
+-            batch_size=64, ##minibatch size for each epoch, splits the large n_steps batch into mini-batches and traisn the neural network on that
+-            n_epochs=10,##the training doesn't scan the batch once, it goes over multiple times to train data, each iteration is an epoch. too many can lead to overfitting(10 is a good value)
+-            gamma=0.99,##discount factor, how much agent values future rewards over immediete
+-            gae_lambda=0.95,##generalized advantage estimation(GAE) it reduces noise when estimating how good an action was. 
+-            clip_range=0.2, ##PPO clips how much the new policy can change from the old one, it prevents instability and huge policy shifts
+-            ent_coef=0.001, ###entropy coefficient, entropy is the randomness which encourages exploraiton in the loss funciton, higher means more exploraiton, lower means exploit what is already known
+-            vf_coef=0.5,##how much value funciton loss(critic) contributes in compairson wiht policy loss and entropy bonus
+-            policy_kwargs=dict(net_arch=[64, 64]),##architecture for neural network, two hidden layers of 64 neurons,
+-            tensorboard_log=logs_dir,##logs tensorboard log files into the logs director
+-            verbose=1,##prints training progress into the console(1 is minimal)
+-            seed=seed
+-        )
++    model = PPO(
++        "MlpPolicy", ##multilayered perceptron(which is default in sb3)
++        venv, ##pass in our vectorized environment, PPO expects this
++        learning_rate=3e-4, ##how fast weights update during gradient descent(smaller = slower but more stable)
++        n_steps=2048, ## how many steps of experience to collect before each training update. Runs the environment for n_steps and then stores all the info(obs,action,reward) and do gradient updates (large leads to mroe stable gradients but more memory use)
++        batch_size=64, ##minibatch size for each epoch, splits the large n_steps batch into mini-batches and traisn the neural network on that
++        n_epochs=10,##the training doesn't scan the batch once, it goes over multiple times to train data, each iteration is an epoch. too many can lead to overfitting(10 is a good value)
++        gamma=0.99,##discount factor, how much agent values future rewards over immediete
++        gae_lambda=0.95,##generalized advantage estimation(GAE) it reduces noise when estimating how good an action was. 
++        clip_range=0.2, ##PPO clips how much the new policy can change from the old one, it prevents instability and huge policy shifts
++        ent_coef=0.001, ###entropy coefficient, entropy is the randomness which encourages exploraiton in the loss funciton, higher means more exploraiton, lower means exploit what is already known
++        vf_coef=0.5,##how much value funciton loss(critic) contributes in compairson wiht policy loss and entropy bonus
++        policy_kwargs=dict(net_arch=[64, 64]),##architecture for neural network, two hidden layers of 64 neurons,
++        tensorboard_log=logs_dir,##logs tensorboard log files into the logs director
++        verbose=1##prints training progress into the console(1 is minimal)
+         
+-        ##train the model by running it for a total_timsetep amount of simulation steps, each step is a single env.step() call
+-        ##total_timsteps/episode_steps = (100,000)/1500=66 episodesroughly
+-        model.learn(total_timesteps=1000000, progress_bar=True)
++    )
++    
++    ##train the model by running it for a total_timsetep amount of simulation steps, each step is a single env.step() call
++    ##total_timsteps/episode_steps = (100,000)/1500=66 episodesroughly
++    model.learn(total_timesteps=1500000, progress_bar=True)
+ 
+-        model.save(os.path.join(models_dir, "complex.zip"))##saved the train model
+-        venv.save(os.path.join(models_dir, "vecnormalize.pkl"))##also saved normalization stats
+-        print(f"Saved model + VecNormalize for seed={seed} into {models_dir}")
++    model.save(os.path.join(models_dir, "complex.zip"))##saved the train model
++    venv.save(os.path.join(models_dir, "vecnormalize.pkl"))##also saved normalization stats
++    print(f"Saved model + VecNormalize into {models_dir}")
+ 
+ 
+ ## the models folder will contain the network weights, hyperparameters and policy config.

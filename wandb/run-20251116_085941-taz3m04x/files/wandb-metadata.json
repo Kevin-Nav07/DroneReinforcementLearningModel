@@ -1,0 +1,40 @@
+{
+  "os": "Windows-10-10.0.22631-SP0",
+  "python": "CPython 3.11.9",
+  "startedAt": "2025-11-16T13:59:41.849054Z",
+  "program": "C:\\Users\\kevin\\Desktop\\HonoursProject\\SingleAgentMain\\Crazyflie-Single-Agent-\\src\\TunePPO.py",
+  "codePath": "src\\TunePPO.py",
+  "codePathLocal": "src\\TunePPO.py",
+  "git": {
+    "remote": "https://github.com/Chad-Git1/Crazyflie-Single-Agent-.git",
+    "commit": "83de2288451707d03220753b06a28a7831df3d9e"
+  },
+  "email": "kevinnaveen@gmail.com",
+  "root": "C:\\Users\\kevin\\Desktop\\HonoursProject\\SingleAgentMain\\Crazyflie-Single-Agent-",
+  "host": "DESKTOP-PU5NS0J",
+  "executable": "C:\\Users\\kevin\\Desktop\\HonoursProject\\SingleAgentMain\\Crazyflie-Single-Agent-\\venv\\Scripts\\python.exe",
+  "cpu_count": 8,
+  "cpu_count_logical": 16,
+  "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "491949912064",
+      "used": "463905366016"
+    }
+  },
+  "memory": {
+    "total": "34065952768"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "memoryTotal": "4294967296",
+      "cudaCores": 2048,
+      "architecture": "Ampere",
+      "uuid": "GPU-1f7a85e0-4b14-25ec-c3c4-e7e681e84c10"
+    }
+  ],
+  "cudaVersion": "12.9",
+  "writerId": "gsfazlvmbc9p253t1yatmgnyli0prkss"
+}

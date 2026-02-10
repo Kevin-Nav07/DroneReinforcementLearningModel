@@ -1,0 +1,24 @@
+wandb_version: 1
+
+batch_size:
+  value: 256
+clip_range:
+  value: 0.2
+ent_coef:
+  value: 0.001
+gae_lambda:
+  value: 0.9409053717157984
+gamma:
+  value: 0.99
+hidden_size:
+  value: 64
+learning_rate:
+  value: 0.00010234081849486242
+n_steps:
+  value: 4096
+seed:
+  value: 1
+total_timesteps:
+  value: 1500000
+vf_coef:
+  value: 0.3

@@ -1,0 +1,22 @@
+{"time":"2025-11-16T17:37:45.0978112-05:00","level":"INFO","msg":"stream: starting","core version":"0.23.0"}
+{"time":"2025-11-16T17:37:45.4464859-05:00","level":"INFO","msg":"stream: created new stream","id":"a1i68a37"}
+{"time":"2025-11-16T17:37:45.4464859-05:00","level":"INFO","msg":"handler: started","stream_id":"a1i68a37"}
+{"time":"2025-11-16T17:37:45.4500546-05:00","level":"INFO","msg":"stream: started","id":"a1i68a37"}
+{"time":"2025-11-16T17:37:45.4500546-05:00","level":"INFO","msg":"writer: started","stream_id":"a1i68a37"}
+{"time":"2025-11-16T17:37:45.4501161-05:00","level":"INFO","msg":"sender: started","stream_id":"a1i68a37"}
+{"time":"2025-11-16T17:37:58.8339061-05:00","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2025-11-16T17:37:58.8341598-05:00","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"C:\\\\Users\\\\kevin\\\\Desktop\\\\HonoursProject\\\\SingleAgentMain\\\\Crazyflie-Single-Agent-\\\\logsComplex2_sweep\\\\peachy-sweep-27\\\\PPO_1\")","namespace":""}
+{"time":"2025-11-16T17:37:58.8365683-05:00","level":"INFO","msg":"tensorboard: saving file","fileLocation":"C:\\Users\\kevin\\Desktop\\HonoursProject\\SingleAgentMain\\Crazyflie-Single-Agent-\\logsComplex2_sweep\\peachy-sweep-27\\PPO_1\\events.out.tfevents.1763332668.DESKTOP-PU5NS0J.21596.26","runPath":"logsComplex2_sweep/peachy-sweep-27/PPO_1/events.out.tfevents.1763332668.DESKTOP-PU5NS0J.21596.26"}
+{"time":"2025-11-16T17:37:58.8421643-05:00","level":"ERROR","msg":"tensorboard: error creating symlink","target":"C:\\Users\\kevin\\Desktop\\HonoursProject\\SingleAgentMain\\Crazyflie-Single-Agent-\\logsComplex2_sweep\\peachy-sweep-27\\PPO_1\\events.out.tfevents.1763332668.DESKTOP-PU5NS0J.21596.26","symlink":"C:\\Users\\kevin\\Desktop\\HonoursProject\\SingleAgentMain\\Crazyflie-Single-Agent-\\wandb\\run-20251116_173742-a1i68a37\\files\\logsComplex2_sweep\\peachy-sweep-27\\PPO_1\\events.out.tfevents.1763332668.DESKTOP-PU5NS0J.21596.26","error":"symlink C:\\Users\\kevin\\Desktop\\HonoursProject\\SingleAgentMain\\Crazyflie-Single-Agent-\\logsComplex2_sweep\\peachy-sweep-27\\PPO_1\\events.out.tfevents.1763332668.DESKTOP-PU5NS0J.21596.26 C:\\Users\\kevin\\Desktop\\HonoursProject\\SingleAgentMain\\Crazyflie-Single-Agent-\\wandb\\run-20251116_173742-a1i68a37\\files\\logsComplex2_sweep\\peachy-sweep-27\\PPO_1\\events.out.tfevents.1763332668.DESKTOP-PU5NS0J.21596.26: A required privilege is not held by the client."}
+{"time":"2025-11-16T17:46:14.1857828-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":1473}
+{"time":"2025-11-16T17:46:14.1880967-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":6}
+{"time":"2025-11-16T17:56:34.777047-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3351}
+{"time":"2025-11-16T17:56:34.7781125-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":6}
+{"time":"2025-11-16T18:28:11.4013811-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":8755}
+{"time":"2025-11-16T18:28:11.4020264-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":6}
+{"time":"2025-11-16T18:28:53.6503547-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-11-16T18:28:54.0047927-05:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-11-16T18:28:54.0166413-05:00","level":"INFO","msg":"stream: closing","id":"a1i68a37"}
+{"time":"2025-11-16T18:28:54.0166413-05:00","level":"INFO","msg":"handler: closed","stream_id":"a1i68a37"}
+{"time":"2025-11-16T18:28:54.0171971-05:00","level":"INFO","msg":"sender: closed","stream_id":"a1i68a37"}
+{"time":"2025-11-16T18:28:54.0171971-05:00","level":"INFO","msg":"stream: closed","id":"a1i68a37"}

@@ -1,0 +1,591 @@
+diff --git a/models/CF_THRUST/ppo_thrust.zip b/models/CF_THRUST/ppo_thrust.zip
+deleted file mode 100644
+index 38b90df..0000000
+Binary files a/models/CF_THRUST/ppo_thrust.zip and /dev/null differ
+diff --git a/models/CF_THRUST/vecnormalize.pkl b/models/CF_THRUST/vecnormalize.pkl
+deleted file mode 100644
+index 17ce904..0000000
+Binary files a/models/CF_THRUST/vecnormalize.pkl and /dev/null differ
+diff --git a/models/PPO/1000.zip b/models/PPO/1000.zip
+deleted file mode 100644
+index 545aa17..0000000
+Binary files a/models/PPO/1000.zip and /dev/null differ
+diff --git a/models/PPO/10000.zip b/models/PPO/10000.zip
+deleted file mode 100644
+index d417bb8..0000000
+Binary files a/models/PPO/10000.zip and /dev/null differ
+diff --git a/models/PPO/2000.zip b/models/PPO/2000.zip
+deleted file mode 100644
+index dc884a8..0000000
+Binary files a/models/PPO/2000.zip and /dev/null differ
+diff --git a/models/PPO/3000.zip b/models/PPO/3000.zip
+deleted file mode 100644
+index 4df533b..0000000
+Binary files a/models/PPO/3000.zip and /dev/null differ
+diff --git a/models/PPO/4000.zip b/models/PPO/4000.zip
+deleted file mode 100644
+index 22d0ef3..0000000
+Binary files a/models/PPO/4000.zip and /dev/null differ
+diff --git a/models/PPO/5000.zip b/models/PPO/5000.zip
+deleted file mode 100644
+index 677ac84..0000000
+Binary files a/models/PPO/5000.zip and /dev/null differ
+diff --git a/models/PPO/6000.zip b/models/PPO/6000.zip
+deleted file mode 100644
+index d0ea99b..0000000
+Binary files a/models/PPO/6000.zip and /dev/null differ
+diff --git a/models/PPO/7000.zip b/models/PPO/7000.zip
+deleted file mode 100644
+index cddb8dd..0000000
+Binary files a/models/PPO/7000.zip and /dev/null differ
+diff --git a/models/PPO/8000.zip b/models/PPO/8000.zip
+deleted file mode 100644
+index dad6694..0000000
+Binary files a/models/PPO/8000.zip and /dev/null differ
+diff --git a/models/PPO/9000.zip b/models/PPO/9000.zip
+deleted file mode 100644
+index e938575..0000000
+Binary files a/models/PPO/9000.zip and /dev/null differ
+diff --git a/models/PPO/best_model.zip b/models/PPO/best_model.zip
+deleted file mode 100644
+index 7daf87a..0000000
+Binary files a/models/PPO/best_model.zip and /dev/null differ
+diff --git a/models/PPO/checkpoint_10000.zip b/models/PPO/checkpoint_10000.zip
+deleted file mode 100644
+index 03785f4..0000000
+Binary files a/models/PPO/checkpoint_10000.zip and /dev/null differ
+diff --git a/models/PPO/checkpoint_12000.zip b/models/PPO/checkpoint_12000.zip
+deleted file mode 100644
+index 85e0875..0000000
+Binary files a/models/PPO/checkpoint_12000.zip and /dev/null differ
+diff --git a/models/PPO/checkpoint_14000.zip b/models/PPO/checkpoint_14000.zip
+deleted file mode 100644
+index 73e8e75..0000000
+Binary files a/models/PPO/checkpoint_14000.zip and /dev/null differ
+diff --git a/models/PPO/checkpoint_16000.zip b/models/PPO/checkpoint_16000.zip
+deleted file mode 100644
+index ab6ea45..0000000
+Binary files a/models/PPO/checkpoint_16000.zip and /dev/null differ
+diff --git a/models/PPO/checkpoint_18000.zip b/models/PPO/checkpoint_18000.zip
+deleted file mode 100644
+index fc33923..0000000
+Binary files a/models/PPO/checkpoint_18000.zip and /dev/null differ
+diff --git a/models/PPO/checkpoint_2000.zip b/models/PPO/checkpoint_2000.zip
+deleted file mode 100644
+index 44407d4..0000000
+Binary files a/models/PPO/checkpoint_2000.zip and /dev/null differ
+diff --git a/models/PPO/checkpoint_4000.zip b/models/PPO/checkpoint_4000.zip
+deleted file mode 100644
+index 9060eec..0000000
+Binary files a/models/PPO/checkpoint_4000.zip and /dev/null differ
+diff --git a/models/PPO/checkpoint_6000.zip b/models/PPO/checkpoint_6000.zip
+deleted file mode 100644
+index 3a0e4f9..0000000
+Binary files a/models/PPO/checkpoint_6000.zip and /dev/null differ
+diff --git a/models/PPO/checkpoint_8000.zip b/models/PPO/checkpoint_8000.zip
+deleted file mode 100644
+index 54bb851..0000000
+Binary files a/models/PPO/checkpoint_8000.zip and /dev/null differ
+diff --git a/models/SAC/1000.zip b/models/SAC/1000.zip
+deleted file mode 100644
+index 545aa17..0000000
+Binary files a/models/SAC/1000.zip and /dev/null differ
+diff --git a/models/SAC/10000.zip b/models/SAC/10000.zip
+deleted file mode 100644
+index e2a7688..0000000
+Binary files a/models/SAC/10000.zip and /dev/null differ
+diff --git a/models/SAC/2000.zip b/models/SAC/2000.zip
+deleted file mode 100644
+index 6a71151..0000000
+Binary files a/models/SAC/2000.zip and /dev/null differ
+diff --git a/models/SAC/3000.zip b/models/SAC/3000.zip
+deleted file mode 100644
+index 4df533b..0000000
+Binary files a/models/SAC/3000.zip and /dev/null differ
+diff --git a/models/SAC/4000.zip b/models/SAC/4000.zip
+deleted file mode 100644
+index 41fd342..0000000
+Binary files a/models/SAC/4000.zip and /dev/null differ
+diff --git a/models/SAC/5000.zip b/models/SAC/5000.zip
+deleted file mode 100644
+index 677ac84..0000000
+Binary files a/models/SAC/5000.zip and /dev/null differ
+diff --git a/models/SAC/6000.zip b/models/SAC/6000.zip
+deleted file mode 100644
+index 1e5e32e..0000000
+Binary files a/models/SAC/6000.zip and /dev/null differ
+diff --git a/models/SAC/7000.zip b/models/SAC/7000.zip
+deleted file mode 100644
+index cddb8dd..0000000
+Binary files a/models/SAC/7000.zip and /dev/null differ
+diff --git a/models/SAC/8000.zip b/models/SAC/8000.zip
+deleted file mode 100644
+index 8f9b0f2..0000000
+Binary files a/models/SAC/8000.zip and /dev/null differ
+diff --git a/models/SAC/9000.zip b/models/SAC/9000.zip
+deleted file mode 100644
+index e938575..0000000
+Binary files a/models/SAC/9000.zip and /dev/null differ
+diff --git a/models/SAC/best_model.zip b/models/SAC/best_model.zip
+deleted file mode 100644
+index fe53172..0000000
+Binary files a/models/SAC/best_model.zip and /dev/null differ
+diff --git a/models/SAC/checkpoint_10000.zip b/models/SAC/checkpoint_10000.zip
+deleted file mode 100644
+index b088199..0000000
+Binary files a/models/SAC/checkpoint_10000.zip and /dev/null differ
+diff --git a/models/SAC/checkpoint_12000.zip b/models/SAC/checkpoint_12000.zip
+deleted file mode 100644
+index a95e535..0000000
+Binary files a/models/SAC/checkpoint_12000.zip and /dev/null differ
+diff --git a/models/SAC/checkpoint_14000.zip b/models/SAC/checkpoint_14000.zip
+deleted file mode 100644
+index 6bc45d3..0000000
+Binary files a/models/SAC/checkpoint_14000.zip and /dev/null differ
+diff --git a/models/SAC/checkpoint_16000.zip b/models/SAC/checkpoint_16000.zip
+deleted file mode 100644
+index 70fb01c..0000000
+Binary files a/models/SAC/checkpoint_16000.zip and /dev/null differ
+diff --git a/models/SAC/checkpoint_18000.zip b/models/SAC/checkpoint_18000.zip
+deleted file mode 100644
+index 70fcc21..0000000
+Binary files a/models/SAC/checkpoint_18000.zip and /dev/null differ
+diff --git a/models/SAC/checkpoint_2000.zip b/models/SAC/checkpoint_2000.zip
+deleted file mode 100644
+index f96b4ba..0000000
+Binary files a/models/SAC/checkpoint_2000.zip and /dev/null differ
+diff --git a/models/SAC/checkpoint_4000.zip b/models/SAC/checkpoint_4000.zip
+deleted file mode 100644
+index 3b3e37f..0000000
+Binary files a/models/SAC/checkpoint_4000.zip and /dev/null differ
+diff --git a/models/SAC/checkpoint_6000.zip b/models/SAC/checkpoint_6000.zip
+deleted file mode 100644
+index 43f0e87..0000000
+Binary files a/models/SAC/checkpoint_6000.zip and /dev/null differ
+diff --git a/models/SAC/checkpoint_8000.zip b/models/SAC/checkpoint_8000.zip
+deleted file mode 100644
+index 967bd29..0000000
+Binary files a/models/SAC/checkpoint_8000.zip and /dev/null differ
+diff --git a/src/CrazyFlieEnvComplex.py b/src/CrazyFlieEnvComplex.py
+index e607ec1..7013dc8 100644
+--- a/src/CrazyFlieEnvComplex.py
++++ b/src/CrazyFlieEnvComplex.py
+@@ -50,7 +50,13 @@ class CrazyFlieEnv(gym.Env):
+         # Anti-overshoot guards defining a soft ceiling for the drone to not go over(small penalty) and a hard ceiling where the episode terminates and big penalty
+         soft_ceiling_margin: float = 0.20,    # start penalizing > target+0.20 m
+         hard_ceiling_margin: float = 0.40,    # terminate if > target+0.40 m
+-        print_actuators: bool = False,##remove?
++        ##these are noise paramters to simulate domain randomization
++        obs_noise_std: float = 0.0,       # per-step Gaussian noise on obs
++        obs_bias_std: float = 0.0,        # per-episode constant bias on obs
++        action_noise_std: float = 0.0,    # Gaussian noise on actions
++        motor_scale_std: float = 0.0,     # per-episode thrust gain error
++        frame_skip: int = 10,             # base frame skip (was 10)
++        frame_skip_jitter: int = 0,       # +/- jitter in frame skip per episode
+     ):
+         
+         """ Initilaization function to first create the CrazyFlyEnv
+@@ -82,6 +88,20 @@ class CrazyFlieEnv(gym.Env):
+         ######Frame Stack#######
+         self.n_stack = int(n_stack)   ## how many past frames to stack, frame stacking is for passing an array of observations
+         self.obs_dim_single = 13 ##defining a single framed observation as 13 dimensions
++        #### Domain randomizations
++        self.obs_noise_std = float(obs_noise_std)
++        self.obs_bias_std = float(obs_bias_std)
++        self.action_noise_std = float(action_noise_std)
++        self.motor_scale_std = float(motor_scale_std)
++
++        self.frame_skip_base = int(frame_skip)
++        self.frame_skip_jitter = int(frame_skip_jitter)
++        self.frame_skip = self.frame_skip_base  # will be randomized in reset()
++
++        # Per-episode random variables (filled in reset)
++        self.obs_bias = np.zeros(self.obs_dim_single, dtype=np.float32)
++        self.motor_scale = 1.0
++
+ 
+         #remove maybe? 
+         self.mode = "thrust_plus_moments"## in the mode where the control is the thrust + x,y,z moments
+@@ -143,7 +163,7 @@ class CrazyFlieEnv(gym.Env):
+         #  track thrust jerk and vertical speed across the smooth_window(60 steps = 1s)to detect smooth hover with a deque datastructure
+         self.du_hist = deque(maxlen=int(smooth_window))##tracking thrust
+         self.vz_hist = deque(maxlen=int(smooth_window))##tracking vertical velocity
+-        self.frame_skip = 10##for mujoco, since mujoco steps are 0.02, this makes it 0.2
++       
+         # Ceiling values
+         self.soft_ceiling = self.target_z + float(soft_ceiling_margin)
+         self.hard_ceiling = self.target_z + float(hard_ceiling_margin)
+@@ -159,6 +179,67 @@ class CrazyFlieEnv(gym.Env):
+         self.prev_dz = 0.0
+ 
+ 
++
++    def _apply_obs_noise(self, single: np.ndarray) -> np.ndarray:
++            """
++            Take a clean single-frame observation and add:
++            - per-episode bias (obs_bias)
++            - per-step Gaussian noise
++            """
++            noisy = single.astype(np.float32).copy()
++
++            # Bias (same every step this episode)
++            if self.obs_bias_std > 0.0:
++                noisy += self.obs_bias
++
++            # Per-step Gaussian noise
++            if self.obs_noise_std > 0.0:
++                rng = getattr(self, "np_random", np.random)
++                noisy += rng.normal(
++                    loc=0.0,
++                    scale=self.obs_noise_std,
++                    size=single.shape,
++                ).astype(np.float32)
++
++            return noisy
++
++    def _sample_episode_randomization(self):
++            """
++            Sample all per-episode random factors:
++            - observation bias
++            - motor thrust gain
++            - frame_skip jitter
++            """
++            rng = getattr(self, "np_random", np.random)
++
++            # Observation bias (e.g., altimeter offset)
++            if self.obs_bias_std > 0.0:
++                self.obs_bias = rng.normal(
++                    loc=0.0,
++                    scale=self.obs_bias_std,
++                    size=self.obs_dim_single,
++                ).astype(np.float32)
++            else:
++                self.obs_bias[:] = 0.0
++
++            # Motor thrust gain error (motors slightly stronger/weaker)
++            if self.motor_scale_std > 0.0:
++                self.motor_scale = float(1.0 + rng.normal(0.0, self.motor_scale_std))
++            else:
++                self.motor_scale = 1.0
++
++            # Frame skip jitter (control frequency variation)
++            if self.frame_skip_jitter > 0:
++                # inclusive low, exclusive high – like randint
++                jitter = int(rng.integers(
++                    -self.frame_skip_jitter,
++                    self.frame_skip_jitter + 1
++                ))
++                self.frame_skip = max(1, self.frame_skip_base + jitter)
++            else:
++                self.frame_skip = self.frame_skip_base
++
++
+     
+         ##reset function that is responsible for the start of every episode to reset values and returns the inital observaiton and info if needed
+     def reset(
+@@ -183,29 +264,30 @@ class CrazyFlieEnv(gym.Env):
+         self.hover_count = 0
+      
+ 
+-        ##clear the history of thrust oscilations and velocity magnitudes.
+-        self.du_hist.clear()
+-        self.vz_hist.clear()
+-        ##reset the step index 
++        self.du_hist.clear()##clear history of thrusts
++        self.vz_hist.clear()##clear history of vertical velocity
+         self.step_idx = 0
++        self.ground_steps = 0
+ 
+-        self.ground_steps = 0 ##reset the ground stall detection counter
+-
+-        z0 = float(self.data.qpos[2])
+-        self.prev_dz = z0 - self.target_z##intialize our height error(distance of drone to target)
++        # --- sample per-episode randomization (bias, motor scale, frame_skip) ---
++        self._sample_episode_randomization()
+ 
++        # --- frame stack reset using NOISY obs (what agent sees) ---
++        self.obs_stack.clear()
++        single_clean = self._get_single_obs()
++        single = self._apply_obs_noise(single_clean)
+ 
+-         # --- frame stack reset ---
+-        self.obs_stack.clear()##clear list of observations
+-        single = self._get_single_obs()
+         for _ in range(self.n_stack):
+             self.obs_stack.append(single.copy())
++
+         if self.n_stack == 1:
+             obs = single
+         else:
+             obs = np.concatenate(list(self.obs_stack), axis=0).astype(np.float32)
++
+         return obs, {}
+ 
++
+     def _apply_thrust(self, u_scalar: float,m_vec:np.ndarray): ####this applies the filtering to the thrust, u_scalar is the thrust aciton
+         ## in this funciton we perform acutator shaping or thrust smoothing and moments
+         ## u_cmd:current motor thrust
+@@ -257,32 +339,48 @@ class CrazyFlieEnv(gym.Env):
+         # scalar thrust request
+         ##requested thrust is clipped first to be in the action space range
+         # u_req = float(np.clip(np.asarray(action).squeeze(), self.action_space.low[0], self.action_space.high[0]))
+-        action = np.asarray(action, dtype=np.float32).squeeze()
+-        if action.shape == ():  # handle scalar edge-case
++        # Convert to array and sanity-check shape
++        a = np.asarray(action, dtype=np.float32).squeeze()
++        if a.shape == ():
+             raise ValueError("Action must be 4D: [thrust, mx, my, mz]")
+ 
+-        # Clip to action space
+-        a_clipped = np.clip(action, self.action_space.low, self.action_space.high)
++        # --- action randomization / noise ---
++        if self.action_noise_std > 0.0:
++            rng = getattr(self, "np_random", np.random)
++            a = a + rng.normal(0.0, self.action_noise_std, size=a.shape).astype(np.float32)
++
++        # Clip to valid action space
++        a_clipped = np.clip(a, self.action_space.low, self.action_space.high)
++
++        # Split into thrust + moments
+         u_req = float(a_clipped[0])
+         m_req = a_clipped[1:4]
+-        self._apply_thrust(u_req,m_req)##send thrust to be filtered and applied to the data.ctrl
+ 
+-        # advance the physics step by sending in our data 
++        # Apply per-episode motor scaling on thrust
++        u_req = float(u_req * self.motor_scale)
++        # Re-clip thrust after scaling
++        u_req = float(np.clip(u_req, self.action_space.low[0], self.action_space.high[0]))
++
++        # Send to actuator shaping (low-pass + slew) and MuJoCo
++        self._apply_thrust(u_req, m_req)
++
++        # advance the physics step
+         for _ in range(self.frame_skip):
+             mj.mj_step(self.model, self.data)
+         self.step_idx += 1
+-
+-
+       
+-        # Single-frame obs, so get the first frame
+-        single = self._get_single_obs()
++         # Clean single observation from MuJoCo
++        single_clean = self._get_single_obs()
++
++        # Noisy obs for the agent
++        single = self._apply_obs_noise(single_clean)
+ 
+-          # Update frame stack and build stacked obs for the agent
++        # Frame stack update with noisy obs
+         if self.n_stack == 1:
+             obs = single
+         else:
+-            # initialize stack if empty (e.g., first step after reset)
+             if len(self.obs_stack) == 0:
++                # If something cleared it, repopulate
+                 for _ in range(self.n_stack):
+                     self.obs_stack.append(single.copy())
+             else:
+@@ -293,10 +391,10 @@ class CrazyFlieEnv(gym.Env):
+       
+       
+         ##from the 13d obs array retrieve any relevant obs variables
+-        x, y, z = float(single[0]), float(single[1]), float(single[2])
+-        qw, qx, qy, qz = single[3:7]
+-        vx, vy, vz = single[7:10]
+-        wx, wy, wz = single[10:13]
++        x, y, z = float(single_clean[0]), float(single_clean[1]), float(single_clean[2])
++        qw, qx, qy, qz = single_clean[3:7]
++        vx, vy, vz = single_clean[7:10]
++        wx, wy, wz = single_clean[10:13]
+         height_err = abs(z - self.target_z) ##height_err is how far we are from target height
+         above = z - self.target_z ##above -- how far above the target are we?If z<target then we will be negative values above target(since above is +)
+         
+@@ -503,36 +601,3 @@ class CrazyFlieEnv(gym.Env):
+         stacked = np.concatenate(list(self.obs_stack), axis=0).astype(np.float32)
+         return stacked
+ 
+-
+-    # ---------- Rendering (rgb_array) ----------
+-
+-    # def _apply_follow_camera(self):
+-    #     if self._renderer is None or self._follow_bid is None:
+-    #         return
+-    #     target = self.data.xpos[self._follow_bid].copy()
+-    #     cam = self._renderer.cam
+-    #     cam.type = mj.mjtCamera.mjCAMERA_FREE
+-    #     cam.lookat[:] = target
+-    #     cam.distance = self._cam_distance
+-    #     cam.elevation = self._cam_elevation
+-    #     cam.azimuth = self._cam_azimuth
+-
+-    # def render(self) -> Optional[np.ndarray]:
+-    #     if self.render_mode == "rgb_array":
+-    #         if self._renderer is None:
+-    #             self._renderer = mj.Renderer(self.model, height=self._height, width=self._width)
+-    #         if self._camera_name is not None:
+-    #             self._renderer.update_scene(self.data, camera=self._camera_name)
+-    #         else:
+-    #             self._apply_follow_camera()
+-    #             self._renderer.update_scene(self.data)
+-    #         img = self._renderer.render()
+-    #         return np.clip(img * 255.0, 0, 255).astype(np.uint8)
+-    #     elif self.render_mode == "human":
+-    #         return None
+-    #     return None
+-
+-    # def close(self):
+-    #     if self._renderer is not None:
+-    #         self._renderer.close()
+-    #         self._renderer = None
+diff --git a/src/EvaluationComplex.py b/src/EvaluationComplex.py
+index b4c77e5..b39e716 100644
+--- a/src/EvaluationComplex.py
++++ b/src/EvaluationComplex.py
+@@ -23,6 +23,37 @@ from stable_baselines3.common.monitor import Monitor
+ ##alter mujocco step for 10 steps rather than 1 physics step
+ 
+ 
++
++##change xml value for thrust range
++##parallel environment implementation
++##introduce complexity to action space 
++##for drone api figure out which things we can control
++##use weights and biases then run hyperparameter suite over night
++#reduce entropy gain/loss
++##reduce episode length and increase episode count
++## have at least 3 seeds
++
++##in action space add penalty for difference in previous and current action to prevent large thrust
++##for input to pokicy add a history of states called frame stacking
++##next 2 weeks, add guasian noise for domain randomization
++##alter mujocco step for 10 steps rather than 1 physics step
++
++
++##Week 10
++##look at seeds for hyperparameter tuning 
++##randomize hover heights and phases to help drone learnign with height 
++##add some noises
++##domain randomization
++##randomize the observations that came back from the drone, randomize the actions, randomize the the physics steps
++##add safety controls for certain pitch/rolls to catch issues or if it goes past a certain point, limit
++##
++
++
++##add some gausian noise(randomize actions, rnadomize the physcs steps etc.)
++##do hyperparameter sweep over night with some seeds
++##add safety controls for certain pitch/rolls to catch issues or if it goes past a certain point
++##work on actual environment
++
+ from CrazyFlieEnvComplex import CrazyFlieEnv
+ 
+ 
+@@ -37,9 +68,9 @@ if __name__ == "__main__":
+     here = os.path.dirname(__file__)
+     xml_path = os.path.abspath(os.path.join(here, "..", "Assets", "bitcraze_crazyflie_2", "scene.xml"))
+     ##path to models and the specific model zip file
+-    models_dir = os.path.abspath(os.path.join(here, "..", "models", "Complex2"))
+-    model_path = os.path.join(models_dir, "complex.zip")
+-    norm_path  = os.path.join(models_dir, "vecnormalize.pkl")
++    models_dir = os.path.abspath(os.path.join(here, "..", "models", "Complex2_DR"))
++    model_path = os.path.join(models_dir, "complex_dr.zip")
++    norm_path  = os.path.join(models_dir, "vecnormalize_dr.pkl")
+ 
+     TARGET_Z  = 1
+     MAX_STEPS = 1500
+@@ -58,10 +89,17 @@ if __name__ == "__main__":
+         xml_path=xml_path,
+         target_z=TARGET_Z,
+         max_steps=MAX_STEPS,
+-        n_stack=4
+-      
+-        # render_mode=None because we'll use the interactive viewer below
+-    )## we don't wrap it with dummyVecEnv because mujocco only works with a single env
++        n_stack=4,
++        hover_required_steps=600,
++        # Evaluation: no extra noise (or use milder values)
++        obs_noise_std=0.005,
++        obs_bias_std=0.01,
++        action_noise_std=0.005,
++        motor_scale_std=0.02,  # ±2% thrust gain
++        frame_skip=10,
++        frame_skip_jitter=1,  
++    )
++## we don't wrap it with dummyVecEnv because mujocco only works with a single env
+     obs_raw, _ = env.reset()
+     dt_sim = env.model.opt.timestep
+     dt_step = dt_sim * env.frame_skip 
+diff --git a/src/Tests/hover_test.py b/src/Tests/hover_test.py
+index 255bbc3..a448031 100644
+--- a/src/Tests/hover_test.py
++++ b/src/Tests/hover_test.py
+@@ -20,6 +20,7 @@ def hover_test():
+ 
+     model = mujoco.MjModel.from_xml_path(path)
+     data = mujoco.MjData(model)
++    print(model.opt.timestep)
+ 
+     # Base hover thrust (keeps the drone at a stationary hover in this case, counteracts gravity)
+     BASE_THRUST = 0.26487 ## weight = mass (0.027 kg) x gravity (9.81 m/s^2)
+diff --git a/src/TrainComplex.py b/src/TrainComplex.py
+index e81afa5..ed1dfea 100644
+--- a/src/TrainComplex.py
++++ b/src/TrainComplex.py
+@@ -11,19 +11,34 @@ from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
+ from CrazyFlieEnvComplex import CrazyFlieEnv
+ 
+ ##factory function, a function that returns another function
+-def make_env(xml_path: str, target_z: float, max_steps: int = 1500, rank:int = 0):##Sb3 expects a function that returns a function to return the environment wrapped with the monitor
++def make_env(xml_path: str, target_z: float, max_steps: int = 1500, rank: int = 0):
+     def _f():
+-
+-        env = CrazyFlieEnv(xml_path=xml_path, target_z=target_z, max_steps=max_steps, n_stack=4,hover_required_steps=600)
++        env = CrazyFlieEnv(
++            xml_path=xml_path,
++            target_z=target_z,
++            max_steps=max_steps,
++            n_stack=4,
++            hover_required_steps=600,
++            # <-- add domain randomization params here
++            **DR_PARAMS,
++        )
+         env = Monitor(env)
+         env.reset(seed=rank)
+-        # env.reset(seed=rank+base_seed)
+-        # env.action_space.seed(base_seed + 10_000 + rank)
+         return env
+     return _f
+ 
+ 
++
+ if __name__ == "__main__":
++    # Domain randomization settings used for TRAINING
++    DR_PARAMS = dict(
++        obs_noise_std=0.0,
++        obs_bias_std=0.0,
++        action_noise_std=0.0,
++        motor_scale_std=0.0,  # ±5% thrust gain
++        frame_skip=10,
++        frame_skip_jitter=0,   # frame skip in [8, 12]
++    )
+     here = os.path.dirname(__file__)
+ 
+     # Point to your MuJoCo scene.xml (adjust path to your repo layout)
+@@ -41,6 +56,8 @@ if __name__ == "__main__":
+     MAX_STEPS = 1500
+     N_ENVS = 8  # or 4, 16, etc.
+     SEEDS = [0]
++
++    
+     
+   
+     env_fns = [make_env(xml_path, TARGET_Z, MAX_STEPS, rank=i) for i in range(N_ENVS)]
+@@ -68,7 +85,7 @@ if __name__ == "__main__":
+     
+     ##train the model by running it for a total_timsetep amount of simulation steps, each step is a single env.step() call
+     ##total_timsteps/episode_steps = (100,000)/1500=66 episodesroughly
+-    model.learn(total_timesteps=1000000, progress_bar=True)
++    model.learn(total_timesteps=1500000, progress_bar=True)
+ 
+     model.save(os.path.join(models_dir, "complex.zip"))##saved the train model
+     venv.save(os.path.join(models_dir, "vecnormalize.pkl"))##also saved normalization stats
