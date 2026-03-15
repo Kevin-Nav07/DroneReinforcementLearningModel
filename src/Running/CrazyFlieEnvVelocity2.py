@@ -246,27 +246,32 @@ class CrazyFlieEnvVelocity(gym.Env):
         self.prev_cmd = np.zeros(4, dtype=np.float32)##stores previous action/command for reward func
 
         ##reward weights
-        # "Good enough" scales — used to normalize squared errors (dimensionless)
-        self.z_scale = 0.10                 # meters (hover band-ish)
-        self.vz_scale = 0.20                # m/s (vertical stability)
-        self.r_scale = 0.25                 # meters (lateral drift radius)
-        self.vxy_scale = 0.25               # m/s (lateral speed)
-        self.tilt_scale = np.deg2rad(10.0)  # radians (tilt threshold)
-        self.omega_scale = np.deg2rad(200.0)  # rad/s-ish, just damping spikes
+        # FEEDFORWARD VZ REWARD -- this is the key fix for takeoff.
+        # vz_desired = clip(-ff_k * dz, -max_vz_ff, +max_vz_ff)
+        # Policy is penalized for NOT climbing when below target (dz < 0).
+        # At ground (dz=-1.0): vz_desired=+0.6 m/s. Sitting still costs 16 units.
+        self.ff_k      = 1.5   # gain on height error -> desired vertical velocity
+        self.max_vz_ff = 0.60  # m/s cap on feedforward setpoint
+
+        self.z_scale    = 0.30               # m   -- 30cm precision required
+        self.vz_scale   = 0.30               # m/s -- relaxed so imperfect climb does not dominate
+        self.r_scale    = 0.40               # m   -- 40cm lateral tolerance
+        self.vxy_scale  = 0.20               # m/s -- lateral speed tolerance
+        self.tilt_scale = np.deg2rad(12.0)   # rad -- 12 deg tilt = barely acceptable
+        self.omega_scale = np.deg2rad(120.0) # rad/s -- angular rate damping
 
         # Weights for each normalized cost term
-        self.w_z = 1.0
-        self.w_vz = 0.5
-        self.w_r = 0.5
-        self.w_vxy = 0.5
-        self.w_tilt = 1.0
-        self.w_omega = 0.05
+        self.w_z       = 1.5   # height error
+        self.w_vz      = 0.5   # guidance not hard constraint (was 1.0, reduced to prevent overshoot fixation)
+        self.w_r       = 0.5   # lateral drift
+        self.w_vxy     = 0.5   # lateral speed
+        self.w_tilt    = 0.8   # tilt
+        self.w_omega   = 0.10  # angular rate
         self.w_smooth_u = 0.05
         self.w_smooth_m = 0.05
 
-        # Smoothness normalization (typical “small” changes)
         self.du_scale = 0.02   # "small" thrust change per env step
-        self.dm_scale = 0.50   # "small" moment change norm (moments are clipped [-1, 1])
+        self.dm_scale = 0.40   # "small" moment change norm
 
     
     def _sample_episode_randomization(self):
@@ -415,7 +420,7 @@ class CrazyFlieEnvVelocity(gym.Env):
         self.spawn_z = float(z0)
         
         ##set all target z, soft and hard ceilings
-        self.target_z_abs = self.spawn_z + self.target_z
+        self.target_z_abs = self.target_z  # ABSOLUTE target height, not spawn-relative
         self.soft_ceiling = self.target_z_abs + self.soft_ceiling_margin
         self.hard_ceiling = self.target_z_abs + self.hard_ceiling_margin
         ##change spawn if it is above the hard ceiling
@@ -641,7 +646,7 @@ class CrazyFlieEnvVelocity(gym.Env):
 
         att_scale = self.att_base_scale
 
-        if z < self.spawn_z + self.near_ground_z:
+        if z < self.near_ground_z:  # absolute height, not spawn-relative
             att_scale = min(att_scale, self.near_ground_scale)
 
         if tilt_deg > self.tilt_soft_deg:
@@ -700,146 +705,137 @@ class CrazyFlieEnvVelocity(gym.Env):
         # step()
         # ------------------------------------------------------------------
     def step(self, action: np.ndarray):
-        """takes in an action, converts the normalized action space into physical actuator signals.
-        advance mj steps with the action
-        then build the new observation and add sensor noise and append to frame stack
-        compute reward and termination checks
+        """
+        Takes in an action, converts the normalized action space into physical actuator signals,
+        advances MuJoCo for frame_skip physics steps, builds the new observation (with noise + frame stack),
+        computes a SCALED reward (so episode returns don't blow up), and applies termination checks.
         """
 
-        ##convert the action to numpy and ensure it is float32
+        # --- Auto-landing override (if active) ---
         a = np.asarray(action, dtype=np.float32).squeeze()
-
-        ##auto landing feature: if landing phase is active, bypass normal hover logic
         if self.auto_landing and (self.phase == "LANDING"):
             return self._step_landing(action)
 
-        ##check action shape (must be 4 values: roll_cmd, pitch_cmd, yawrate_cmd, vz_cmd)
+        # --- Validate action shape ---
         if a.shape != (4,):
             raise ValueError("Action must be shape (4,): [roll_cmd, pitch_cmd, yawrate_cmd, vz_cmd]")
 
-        ##add action noise (optional domain randomization)
+        # --- Optional action noise (domain randomization) ---
         if self.action_noise_std > 0.0:
             rng = getattr(self, "np_random", np.random)
             a = a + rng.normal(0.0, self.action_noise_std, size=a.shape).astype(np.float32)
 
-        ##clip action to action space bounds [-1, 1]
+        # --- Clip action to [-1, 1] bounds ---
         a_clipped = np.clip(a, self.action_space.low, self.action_space.high)
 
-        ##get current clean state BEFORE applying action
+        # --- State before applying action (clean) ---
         state_now = self._get_single_obs()
         x, y, z = float(state_now[0]), float(state_now[1]), float(state_now[2])
         qw, qx, qy, qz = state_now[3:7]
         vx, vy, vz = float(state_now[7]), float(state_now[8]), float(state_now[9])
 
-        ##compute relative position from spawn point (used for drift and safety)
+        # --- Lateral radius from spawn ---
         x_rel = x - float(self.spawn_xy[0])
         y_rel = y - float(self.spawn_xy[1])
-        r_rad = float(np.sqrt(x_rel * x_rel + y_rel * y_rel))##lateral radius
+        r_rad = float(np.sqrt(x_rel * x_rel + y_rel * y_rel))
 
-        ##compute current tilt from quaternion (approx tilt magnitude)
+        # --- Tilt estimate from quaternion (approx) ---
         tilt_sin = float(np.clip(np.sqrt(qx * qx + qy * qy), 0.0, 1.0))
         tilt_angle = float(2.0 * np.arcsin(tilt_sin))
         tilt_deg = float(np.rad2deg(tilt_angle))
 
-        ##convert normalized policy action -> (thrust in N, moment vector) via commander mapping
-        ##dbg contains things like att_scale which is useful for logging
+        # --- Convert normalized commander action -> thrust (N) and moments via your mapping ---
         u_req, m_req, dbg = self._commander_action_to_thrust_moments(
             a_clipped, state_now, tilt_deg=tilt_deg, r_rad=r_rad, z=z
         )
 
-        ##apply motor scaling domain randomization then clip to MuJoCo thrust range
+        # --- Apply per-episode motor scaling DR and clip to MuJoCo thrust bounds ---
         u_req = float(np.clip(u_req * self.motor_scale, self.tmin, self.tmax))
 
-        ##apply thrust + moments (thrust smoothing happens inside _apply_thrust)
+        # --- Apply thrust + moments (includes smoothing inside _apply_thrust) ---
         self._apply_thrust(u_req, m_req)
 
-        ##step the physics forward frame_skip times
+        # --- Step MuJoCo forward frame_skip times ---
         dt = float(self.model.opt.timestep)
         for _ in range(self.frame_skip):
-            self._apply_disturbances(dt)##external torques/drag disturbances
-            mj.mj_step(self.model, self.data)##advance MuJoCo sim one physics step
+            self._apply_disturbances(dt)
+            mj.mj_step(self.model, self.data)
 
-        ##increment episode step counter
+        # --- Advance env step counter ---
         self.step_idx += 1
 
-        ##get next clean state and next noisy observation
+        # --- Build next observation (clean -> noisy -> frame stack) ---
         single_clean = self._get_single_obs()
-        single = self._apply_obs_noise(single_clean)
+        single_noisy = self._apply_obs_noise(single_clean)
 
-        ##frame stacking logic
         if self.n_stack == 1:
-            obs = single
+            obs = single_noisy
         else:
             if len(self.obs_stack) == 0:
                 for _ in range(self.n_stack):
-                    self.obs_stack.append(single.copy())
+                    self.obs_stack.append(single_noisy.copy())
             else:
-                self.obs_stack.append(single.copy())
+                self.obs_stack.append(single_noisy.copy())
             obs = np.concatenate(list(self.obs_stack), axis=0).astype(np.float32)
 
-        ##unpack next clean state for reward + termination
+        # --- Unpack next clean state for reward/termination ---
         x2, y2, z2 = float(single_clean[0]), float(single_clean[1]), float(single_clean[2])
         qw2, qx2, qy2, qz2 = single_clean[3:7]
         vx2, vy2, vz2 = float(single_clean[7]), float(single_clean[8]), float(single_clean[9])
         wx2, wy2, wz2 = float(single_clean[10]), float(single_clean[11]), float(single_clean[12])
 
-        ##compute lateral drift radius from spawn
+        # --- Lateral drift radius from spawn ---
         x_rel2 = x2 - float(self.spawn_xy[0])
         y_rel2 = y2 - float(self.spawn_xy[1])
         r_rad2 = float(np.sqrt(x_rel2 * x_rel2 + y_rel2 * y_rel2))
 
-        ##compute tilt angle from quaternion
+        # --- Tilt from quaternion (same approx) ---
         tilt_sin2 = float(np.clip(np.sqrt(qx2 * qx2 + qy2 * qy2), 0.0, 1.0))
         tilt_angle2 = float(2.0 * np.arcsin(tilt_sin2))
         tilt_deg2 = float(np.rad2deg(tilt_angle2))
 
-        ##store smoothness histories (optional but useful for debugging/stats)
-        self.du_hist.append(self.last_du)##thrust change magnitude
-        self.vz_hist.append(abs(vz2))##vertical speed magnitude
+        # --- Track smoothness histories (optional debugging) ---
+        self.du_hist.append(self.last_du)
+        self.vz_hist.append(abs(vz2))
 
-        ## ------------------------------
-        ## NORMALIZED REWARD (essentials only)
-        ## ------------------------------
-        ## We build a cost = weighted sum of normalized squared errors.
-        ## Then reward = 1 - cost, and we clip reward for PPO stability.
-        ##
-        ## This keeps reward scale stable and avoids duplicate/overlapping reward terms.
-
-     
-
-         ##Ground detection (consistent threshold)
-        ##spawn_z is your ground reference for this episode
-        on_ground = (z2 < (self.spawn_z + self.ground_z_threshold)) and (abs(vz2) < 0.05)
-
-        ##ground stall tracking for termination (prevents "do nothing" policy)
+        # ============================================================
+        # Ground detection + ground stall tracking
+        # ============================================================
+        # FIX: removed abs(vz2) < 0.05 condition.
+        # Old condition allowed the policy to oscillate vz above 0.05 to reset ground_steps,
+        # sitting at ground indefinitely without ever triggering the stall termination.
+        on_ground = (z2 < (self.spawn_z + self.ground_z_threshold))
         if on_ground:
             self.ground_steps += 1
         else:
             self.ground_steps = 0
 
-        ##core errors for hover task
-        dz = z2 - self.target_z_abs                 ##height error (meters)
-        r = r_rad2                                  ##lateral drift radius (meters)
-        vxy2 = vx2 * vx2 + vy2 * vy2                ##lateral speed squared
-        tilt = tilt_angle2                          ##tilt magnitude (radians)
-        omega2 = wx2 * wx2 + wy2 * wy2 + wz2 * wz2  ##angular rate squared (rad/s)^2
+        # ============================================================
+        # NORMALIZED COST -> DENSE REWARD (then SCALE by max_steps)
+        # ============================================================
+        # Core errors
+        dz = z2 - self.target_z_abs                 # height error (m)
+        r = r_rad2                                  # lateral drift radius (m)
+        vxy2 = vx2 * vx2 + vy2 * vy2                # lateral speed squared
+        tilt = tilt_angle2                          # tilt magnitude (rad)
+        omega2 = wx2 * wx2 + wy2 * wy2 + wz2 * wz2  # angular rate squared
 
-        ##normalized squared errors (dimensionless)
-        ##each scale should be set in __init__ to represent what you consider "acceptable"
+        # Normalized squared errors (dimensionless)
         ez2 = (dz / max(self.z_scale, 1e-6)) ** 2
-        evz2 = (vz2 / max(self.vz_scale, 1e-6)) ** 2
+        # FEEDFORWARD: penalize deviation from desired vz, not vz itself.
+        # vz_desired > 0 when below target (must climb), < 0 when above (must descend).
+        vz_desired = float(np.clip(-self.ff_k * dz, -self.max_vz_ff, self.max_vz_ff))
+        evz2 = ((vz2 - vz_desired) / max(self.vz_scale, 1e-6)) ** 2
         er2 = (r / max(self.r_scale, 1e-6)) ** 2
         evxy2 = vxy2 / max(self.vxy_scale * self.vxy_scale, 1e-6)
         etilt2 = (tilt / max(self.tilt_scale, 1e-6)) ** 2
         eomega2 = omega2 / max(self.omega_scale * self.omega_scale, 1e-6)
 
-        ##smoothness terms (important for sim2real)
-        ##last_du: thrust jerk after smoothing
-        ##last_dm: moment jump magnitude
+        # Smoothness penalties (important for sim2real)
         eu2 = (self.last_du / max(self.du_scale, 1e-6)) ** 2
         em2 = (self.last_dm / max(self.dm_scale, 1e-6)) ** 2
 
-        ##total cost combines only the essential terms for hover stability and drift correction
+        # Total cost
         cost = (
             self.w_z * ez2
             + self.w_vz * evz2
@@ -851,20 +847,20 @@ class CrazyFlieEnvVelocity(gym.Env):
             + self.w_smooth_m * em2
         )
 
-        ##base reward: 1 - cost (if cost is small, reward is near 1)
-        reward = 1.0 - float(cost)
+        # Dense step reward (clipped for PPO stability)
+        dense = 1.0 - float(cost)
+        dense = float(np.clip(dense, -2.0, 2.0))
 
-        ##tiny penalty for wasting time on the ground
+        # IMPORTANT: scale so episode returns don't become huge (SB3 sums step rewards)
+        reward = dense * (1.0 / max(1, self.max_steps))
+
+        # Small "wasting time on the ground" penalty, also scaled
         if on_ground:
-            reward -= 0.1
+            reward -= (0.1 / max(1, self.max_steps))
 
-        ##clip reward for PPO stability
-        reward = float(np.clip(reward, -2.0, 2.0))
-
-        ## ------------------------------
-        ## STABILITY TRACKING + SUCCESS
-        ## ------------------------------
-        ## stable hover condition: close to height target, low speed, upright, low drift
+        # ============================================================
+        # STABILITY TRACKING + SUCCESS BONUS
+        # ============================================================
         stable = (
             abs(dz) <= self.band
             and abs(vz2) < 0.05
@@ -874,16 +870,17 @@ class CrazyFlieEnvVelocity(gym.Env):
             and not on_ground
         )
 
-        ##if stable, increment hover counter and give small dense bonus
         if stable:
             self.hover_count += 1
-            reward += 0.2
+            # small dense stability bonus (scaled)
+            reward += (0.2 / max(1, self.max_steps))
         else:
             self.hover_count = 0
 
-        ##success termination: stable for hover_required steps
+        # Success termination (episode-level terminal bonus)
         if self.hover_count >= self.hover_required:
-            reward += 10.0##terminal bonus (moderate)
+            reward += 1.0  # NOT scaled (episode-level)
+
             info = {
                 "success": True,
                 "hover_steps": int(self.hover_count),
@@ -893,59 +890,56 @@ class CrazyFlieEnvVelocity(gym.Env):
                 "att_scale": float(dbg.get("att_scale", 1.0)),
             }
 
-            ##if auto landing enabled, start landing instead of terminating
             if self.auto_landing:
                 self._start_landing_phase("success")
                 info["phase"] = "landing_start"
-                return obs, reward, False, False, info
+                # not terminated yet, entering landing
+                return obs, float(np.clip(reward, -2.0, 2.0)), False, False, info
 
-            return obs, reward, True, False, info
+            return obs, float(np.clip(reward, -2.0, 2.0)), True, False, info
 
-        ## ------------------------------
-        ## TERMINATIONS / TRUNCATIONS
-        ## ------------------------------
+        # ============================================================
+        # TERMINATIONS / TRUNCATIONS (use episode-level penalties)
+        # ============================================================
 
-        ##stalled on ground termination
+        # Stalled on ground (episode-level penalty)
         if self.ground_steps >= self.max_ground_steps:
-            reward -= 100.0
             info = {
                 "crash": True,
                 "reason": "stalled_on_ground",
                 "ground_steps": int(self.ground_steps),
             }
-            return obs, reward, True, False, info
+            return obs, -1.0, True, False, info
 
-        ##nan/below ground termination
+        # NaN / inf / below ground (episode-level penalty)
         if z2 < 0.01 or np.any(np.isnan(obs)) or np.any(np.isinf(obs)):
-            reward -= 100.0
-            return obs, reward, True, False, {"crash": True, "reason": "nan_or_below_ground"}
+            return obs, -1.0, True, False, {"crash": True, "reason": "nan_or_below_ground"}
 
-        ##flipped termination
+        # Flipped (episode-level penalty)
         if tilt_angle2 > np.deg2rad(70.0):
-            reward -= 150.0
-            return obs, reward, True, False, {"crash": True, "reason": "flipped"}
+            return obs, -1.0, True, False, {"crash": True, "reason": "flipped"}
 
-        ##hard ceiling termination
+        # Hard ceiling (episode-level penalty)
         if z2 > self.hard_ceiling:
-            reward -= 100.0
-            return obs, reward, True, False, {"ceiling": True}
+            return obs, -1.0, True, False, {"ceiling": True, "reason": "hard_ceiling"}
 
-        ##out of bounds termination
+        # Out of bounds (episode-level penalty)
         if r_rad2 > self.safety_radius:
-            reward -= 100.0
-            return obs, reward, True, False, {"crash": True, "reason": "out_of_bounds"}
+            return obs, -1.0, True, False, {"crash": True, "reason": "out_of_bounds"}
 
-        ##timeout truncation
+        # Timeout truncation (keep whatever scaled reward you had)
         timeout = self.step_idx >= self.max_steps
         if timeout:
             info = {"hover_steps": int(self.hover_count), "timeout": True}
             if self.auto_landing:
                 self._start_landing_phase("timeout")
                 info["phase"] = "landing_start"
-                return obs, reward, False, False, info
-            return obs, reward, False, True, info
+                return obs, float(np.clip(reward, -2.0, 2.0)), False, False, info
+            return obs, float(np.clip(reward, -2.0, 2.0)), False, True, info
 
-        ##normal step return with debug info
+        # ============================================================
+        # Normal step return
+        # ============================================================
         info = {
             "hover_steps": int(self.hover_count),
             "tilt_deg": float(tilt_deg2),
@@ -954,7 +948,8 @@ class CrazyFlieEnvVelocity(gym.Env):
             "att_scale": float(dbg.get("att_scale", 1.0)),
         }
 
-        return obs, float(reward), False, False, info
+        return obs, float(np.clip(reward, -2.0, 2.0)), False, False, info
+
 
     # ------------------------------------------------------------------
     # Helpers

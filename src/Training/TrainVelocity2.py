@@ -198,7 +198,7 @@ frame_skip_jitter= 0,
     callback = CallbackList([eval_callback, debug_cb])
 
     model.learn(
-        total_timesteps=4_000_000,
+        total_timesteps=2_000_000,
         progress_bar=True,
         reset_num_timesteps=True,  
         callback=callback,
