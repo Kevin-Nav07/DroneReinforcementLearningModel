@@ -1,4 +1,4 @@
-"""CrazyFlie Evaluation v5 — auto_landing=True"""
+"""CrazyFlie Evaluation v6 — Velocity_TiltRobustness_v3 (25° tilt, auto_landing=True)"""
 import os, time
 import numpy as np
 import mujoco
@@ -27,7 +27,7 @@ if __name__ == "__main__":
     PROJECT_ROOT = os.path.abspath(os.path.join(here, "..", ".."))
 
     xml_path   = os.path.join(PROJECT_ROOT, "Assets", "bitcraze_crazyflie_2", "scene.xml")
-    models_dir = os.path.join(PROJECT_ROOT, "models", "Velocity_AbsTarget_v4")
+    models_dir = os.path.join(PROJECT_ROOT, "models", "Velocity_TiltRobustness_v3")
 
     # SB3 appends .zip — do NOT include extension
     model_path = os.path.join(models_dir, "best_model")
@@ -43,10 +43,12 @@ if __name__ == "__main__":
     env = CrazyFlieEnvVelocity(
         xml_path=xml_path, target_z=TARGET_Z, max_steps=MAX_STEPS, n_stack=4,
         hover_required_steps=300, auto_landing=True, safety_radius=4.0,
+        init_tilt_max_deg=25.0,    # evaluate with tilt — set 0.0 for clean run
         obs_noise_std=0.0, obs_bias_std=0.0, action_noise_std=0.0,
         motor_scale_std=0.0, torque_bias_std=0.0, torque_gust_std=0.0,
         drag_lin_max=0.0, drag_quad_max=0.0, frame_skip_jitter=0,
-        start_z_min=1.8, start_z_max=1.8)
+        # Use start_z_min=start_z_max=1.8 — guard handles numpy uniform(x,x) edge case
+        start_z_min=0.01, start_z_max=0.02)
 
     obs_raw, _ = env.reset()
     dt_step = env.model.opt.timestep * env.frame_skip

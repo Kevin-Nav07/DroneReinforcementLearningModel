@@ -7,38 +7,7 @@ from gymnasium import spaces
 import mujoco as mj
 
 class CrazyFlieEnvVelocity(gym.Env):
-    """
-    MuJoCo RL environment for the CrazyFlie 2.1 drone — sim-to-real hover transfer.
-
-    ACTION SPACE  — 4D continuous [-1, 1]:
-        [0] roll_cmd     → desired roll  angle  (±max_roll_deg)
-        [1] pitch_cmd    → desired pitch angle  (±max_pitch_deg)
-        [2] yawrate_cmd  → desired yaw rate     (±max_yawrate_deg/s)
-        [3] vz_cmd       → desired vertical vel (±max_vz_cmd m/s)
-
-    OBSERVATION — 13D × n_stack frames:
-        [0:3]   x_rel, y_rel (spawn-relative), z_abs (ABSOLUTE altitude)
-        [3:7]   quaternion qw, qx, qy, qz
-        [7:10]  linear velocity  vx, vy, vz  (world frame)
-        [10:13] angular velocity wx, wy, wz  (body frame)
-
-    CHANGES vs v4:
-        max_roll/pitch  3°  → 6°    doubles lateral correction force during takeoff
-        ff_k            1.5 → 1.2   gentler climb reduces lateral excitation
-        max_vz_ff       0.6 → 0.5   matches reduced ff_k
-        w_z             2.0 → 1.5   allows gradient to flow at ground (see below)
-        dense clip      -2  → -5    ROOT CAUSE FIX: at ground w/ old params, EVERY
-                                    state clipped to -2.0 regardless of tilt/drift.
-                                    Policy had ZERO gradient to learn upright takeoff.
-                                    With w_z=1.5 + clip=-5: good ground behavior
-                                    gives -3.1 (unclipped); bad gives -5+ (clipped).
-        w_r             0.3 → 0.5   stronger lateral penalty (now gradient flows)
-        r_scale         0.5 → 0.3   penalty starts earlier (at 0.3m not 0.5m)
-        w_vxy           0.2 → 0.4   stronger lateral speed penalty
-        vxy_scale       0.3 → 0.2   tighter lateral speed tolerance
-        w_tilt          0.8 → 1.2   stronger upright pressure (compensates larger max_roll)
-        tilt_scale      12° → 10°   10° is the upright reference (was 12°)
-    """
+   
 
     metadata = {"render_modes": ["human", "rgb_array"], "render_fps": 60}
 
@@ -55,7 +24,10 @@ class CrazyFlieEnvVelocity(gym.Env):
         # ── Spawn ─────────────────────────────────────────────────────────────
         start_z_min: float = 0.85,
         start_z_max: float = 1.15,
-        start_xy_range: float = 0.05,
+        start_xy_range: float = 0.05,   
+        init_tilt_max_deg: float = 0.0,
+        #
+        tilt_min_z: float = 0.30,
         # ── Safety ────────────────────────────────────────────────────────────
         safety_radius: float = 4.0,
         # ── Thrust smoothing ──────────────────────────────────────────────────
@@ -94,9 +66,11 @@ class CrazyFlieEnvVelocity(gym.Env):
         self.hard_ceiling_margin = float(hard_ceiling_margin)
 
         # ── Spawn ─────────────────────────────────────────────────────────────
-        self.start_z_min    = float(start_z_min)
-        self.start_z_max    = float(start_z_max)
-        self.start_xy_range = float(start_xy_range)
+        self.start_z_min       = float(start_z_min)
+        self.start_z_max       = float(start_z_max)
+        self.start_xy_range    = float(start_xy_range)
+        self.init_tilt_max_deg = float(init_tilt_max_deg)
+        self.tilt_min_z        = float(tilt_min_z)
         self.spawn_xy = np.zeros(2, dtype=np.float64)
         self.spawn_z  = 0.0
 
@@ -332,7 +306,43 @@ class CrazyFlieEnvVelocity(gym.Env):
             z0 = self.hard_ceiling - 0.05
             self.spawn_z = z0
 
+        # ── Spawn-tilt height floor ───────────────────────────────────────────
+        # When a tilted spawn is requested, ensure z0 >= tilt_min_z.
+        # Ground-level tilt (z < ~0.05m) is physically unrecoverable: the frame
+        # contacts the floor before any corrective torque acts, so these episodes
+        # contribute only -1 crash rewards and corrupt the tilt-recovery gradient.
+        if self.init_tilt_max_deg > 0.0 and z0 < self.tilt_min_z:
+            z0 = self.tilt_min_z
+            self.spawn_z = z0
+            # Recompute ceilings with the adjusted spawn height
+            self.hard_ceiling = self.target_z_abs + self.hard_ceiling_margin
+            if z0 > self.hard_ceiling - 0.05:
+                z0 = self.hard_ceiling - 0.05
+                self.spawn_z = z0
+
         self.data.qpos[:] = np.array([x0, y0, z0, 1.0, 0.0, 0.0, 0.0], dtype=np.float64)
+
+        # ── Spawn tilt ────────────────────────────────────────────────────────
+        # Sample a random lean in a random horizontal direction and write it
+        # as a quaternion into qpos[3:7].  When init_tilt_max_deg=0 this block
+        # is skipped entirely and behaviour is identical to the original env.
+        if self.init_tilt_max_deg > 0.0:
+            tilt_rad   = float(rng.uniform(0.0, np.deg2rad(self.init_tilt_max_deg)))
+            axis_angle = float(rng.uniform(0.0, 2.0 * np.pi))  # direction of lean
+            ax = float(np.sin(axis_angle))  
+            ay = float(np.cos(axis_angle))   
+           
+            half = tilt_rad * 0.5
+            sin_half = float(np.sin(half))
+            qw = float(np.cos(half))
+            qx = ax * sin_half
+            qy = ay * sin_half
+            qz = 0.0
+            norm = float(np.sqrt(qw**2 + qx**2 + qy**2 + qz**2))
+            if norm > 1e-9:
+                qw, qx, qy, qz = qw/norm, qx/norm, qy/norm, qz/norm
+            self.data.qpos[3:7] = [qw, qx, qy, qz]
+
         self.data.qvel[:] = 0.0
         self.data.ctrl[:] = 0.0
 
@@ -360,7 +370,6 @@ class CrazyFlieEnvVelocity(gym.Env):
             self.obs_stack.append(first.copy())
         return np.concatenate(list(self.obs_stack), axis=0).astype(np.float32), {}
 
-    # ──────────────────────────────────────────────────────────────────────────
     def _apply_disturbances(self, dt: float):
         if int(self.model.nv) < 6:
             return
@@ -392,7 +401,7 @@ class CrazyFlieEnvVelocity(gym.Env):
         self.last_dm      = float(np.linalg.norm(m - self.last_moments, ord=2))
         self.last_moments = m.copy()
 
-    # ──────────────────────────────────────────────────────────────────────────
+    
     @staticmethod
     def _quat_to_euler(qw: float, qx: float, qy: float, qz: float) -> Tuple[float, float, float]:
         roll  = np.arctan2(2.0*(qw*qx + qy*qz), 1.0 - 2.0*(qx*qx + qy*qy))
@@ -496,9 +505,8 @@ class CrazyFlieEnvVelocity(gym.Env):
             + self.w_smooth_m * (self.last_dm / self.dm_scale) ** 2
         )
 
-        # Extended clip: -5.0 allows gradient at ground level.
-        # Old -2.0 clip meant EVERY ground state gave exactly -2.0 reward regardless
-        # of tilt or lateral drift — policy had zero gradient to learn upright takeoff.
+       
+      
         dense  = float(np.clip(1.0 - cost, -5.0, 2.0))
         reward = dense / max(1, self.max_steps)
 
