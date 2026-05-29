@@ -258,7 +258,7 @@ def main():
                 print(f"    rep {i+1}: {fmt_outcome(res)}")
             print(f"    mean R = {np.mean(returns):+.3f}   "
                   f"max tilt = {max(tilts):.1f}\u00b0")
-
+    
     # ── summary table ─────────────────────────────────────────────────────────
     print(f"\n\n{'='*70}")
     print("  SUMMARY TABLE ")
@@ -267,6 +267,10 @@ def main():
           f"{'Max Tilt':<10} {'Mean z_final'}")
     print(f"  {'-'*64}")
 
+    s_systemic = np.zeros(shape=(4, 25), dtype=np.float32)
+    H_0 = np.abs
+  
+    
     for suite in SUITES:
         label    = suite["label"]
         heights  = suite["heights"]

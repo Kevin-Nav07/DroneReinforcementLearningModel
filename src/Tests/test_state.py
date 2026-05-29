@@ -5,7 +5,7 @@ import logging
 import cflib.crtp
 from cflib.utils.power_switch import PowerSwitch
 
-from CrazyFlieStateObserver import CrazyFlieStateObserver
+from Running.CrazyFlieStateObserver import CrazyFlieStateObserver
 
 
 logging.basicConfig(level=logging.INFO)

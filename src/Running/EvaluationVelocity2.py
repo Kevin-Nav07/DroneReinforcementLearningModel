@@ -1,4 +1,10 @@
-"""CrazyFlie Evaluation v6 — Velocity_TiltRobustness_v3 (25° tilt, auto_landing=True)"""
+"""CrazyFlie Evaluation — Velocity_WarmStart_HardDR (HARD DR stress test)
+
+Tests the warm-start model under DR values matching the HARD training phase
+(obs=0.10, bias=0.12, motor=0.25, drag=0.15, drag_quad=0.05, action_noise=0.02).
+Tilt 25° + start z=0.01 is an impossible spawn — use start_z >= 0.20 to fairly
+test tilt recovery.
+"""
 import os, time
 import numpy as np
 import mujoco
@@ -27,7 +33,7 @@ if __name__ == "__main__":
     PROJECT_ROOT = os.path.abspath(os.path.join(here, "..", ".."))
 
     xml_path   = os.path.join(PROJECT_ROOT, "Assets", "bitcraze_crazyflie_2", "scene.xml")
-    models_dir = os.path.join(PROJECT_ROOT, "models", "Velocity_TiltRobustness_v3")
+    models_dir = os.path.join(PROJECT_ROOT, "models", "Velocity_WarmStart_HardDR_Long")
 
     # SB3 appends .zip — do NOT include extension
     model_path = os.path.join(models_dir, "best_model")
@@ -40,15 +46,25 @@ if __name__ == "__main__":
     vecnorm.training = False
     vecnorm.norm_reward = False
 
+    # ── Eval DR values match the HARD training phase ─────────────────────────
+    # These are the values the policy was consolidated on for 10M steps.
+    # If it works here, it should generalize to the real drone.
     env = CrazyFlieEnvVelocity(
         xml_path=xml_path, target_z=TARGET_Z, max_steps=MAX_STEPS, n_stack=4,
-        hover_required_steps=300, auto_landing=True, safety_radius=4.0,
-        init_tilt_max_deg=25.0,    # evaluate with tilt — set 0.0 for clean run
-        obs_noise_std=0.0, obs_bias_std=0.0, action_noise_std=0.0,
-        motor_scale_std=0.0, torque_bias_std=0.0, torque_gust_std=0.0,
-        drag_lin_max=0.0, drag_quad_max=0.0, frame_skip_jitter=0,
-        # Use start_z_min=start_z_max=1.8 — guard handles numpy uniform(x,x) edge case
-        start_z_min=0.01, start_z_max=0.02)
+        hover_required_steps=300, auto_landing=True, safety_radius=2.0,
+        init_tilt_max_deg=0,    # evaluate with tilt — set 0.0 for clean run
+        # Hard-DR sensor + actuator noise
+        action_noise_std = 0.02,
+        obs_noise_std    = 0.10,
+        obs_bias_std     = 0.12,
+        motor_scale_std  = 0.15,
+        # Torque excluded permanently
+        torque_bias_std  = 0.000, torque_gust_std = 0.000,
+        # Drag at hard-DR values
+        drag_lin_max     = 0.15, drag_quad_max = 0.05,
+        frame_skip_jitter= 2,
+        # Start above tilt_min_z so 25° tilt is recoverable
+        start_z_min=0.01, start_z_max=0.01)
 
     obs_raw, _ = env.reset()
     dt_step = env.model.opt.timestep * env.frame_skip

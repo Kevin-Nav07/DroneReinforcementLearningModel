@@ -106,10 +106,10 @@ class CrazyFlieEnvVelocity(gym.Env):
         # max_roll/pitch 3°→6°: PD torque at max command doubles (0.314→0.628),
         # and lateral correction force doubles (0.018N→0.036N = 1.03 m/s²).
         # This is the physical fix enabling attitude correction during takeoff.
-        self.max_roll_deg    = 6.0
-        self.max_pitch_deg   = 6.0
+        self.max_roll_deg    = 70.0
+        self.max_pitch_deg   = 70.0
         self.max_yawrate_deg = 45.0
-        self.max_vz_cmd      = 0.6
+        self.max_vz_cmd      = 1
         self.max_roll_rad  = np.deg2rad(self.max_roll_deg)
         self.max_pitch_rad = np.deg2rad(self.max_pitch_deg)
         self.max_yawrate   = np.deg2rad(self.max_yawrate_deg)

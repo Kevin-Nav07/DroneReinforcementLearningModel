@@ -8,7 +8,7 @@ import numpy as np
 import gymnasium as gym
 from gymnasium import spaces
 
-from Helper.CrazyFlieStateObserver import CrazyFlieStateObserver
+from Running.CrazyFlieStateObserver import CrazyFlieStateObserver
 
 logger = logging.getLogger(__name__)
 
