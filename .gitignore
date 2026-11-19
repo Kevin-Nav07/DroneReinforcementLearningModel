@@ -1,3 +1,14 @@
+# Python bytecode
 __pycache__/
+*.pyc
+
+# Virtual environments
 venv/
+.venv/
 crazyflie-env/
+
+# cflib parameter/log table cache (regenerated on every new connection)
+cache/
+
+# Weights & Biases run folders
+wandb/
