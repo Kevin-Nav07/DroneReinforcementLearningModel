@@ -1,11 +1,21 @@
-mujoco==3.3.5
-numpy==1.26.3
-gymnasium==0.29.1
-torch==2.8.0
-stable-baselines3==2.3.0
-tensorboard
-matplotlib
-cflib
-tqdm
-rich
+# Exact versions from the venv that trained and evaluated the models in models/.
+# The CUDA 12.1 build of torch is only on PyTorch's own package index, so pip
+# also looks there. On a machine without an NVIDIA GPU, change the torch line
+# to torch==2.5.1 to get the CPU build from PyPI instead.
+--extra-index-url https://download.pytorch.org/whl/cu121
 
+# Simulation and reinforcement learning
+mujoco==3.3.5
+numpy==1.26.4
+gymnasium==0.29.1
+torch==2.5.1+cu121
+stable-baselines3==2.3.0
+
+# Training output: TensorBoard curves, progress bar (tqdm + rich), plotting used by SB3
+tensorboard==2.20.0
+matplotlib==3.10.8
+tqdm==4.67.3
+rich==14.3.2
+
+# Real Crazyflie radio link
+cflib==0.1.28
